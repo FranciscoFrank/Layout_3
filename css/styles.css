@@ -65,7 +65,7 @@ body {
     margin-right: 10%;
     text-align: right;
     position: absolute;
-    top: 1%;
+    top: 10px;
     margin-left: 70%;
     display: block;
 }
@@ -128,18 +128,16 @@ body {
 
 .menu-line {
     background-color: var(--third-color);
-    inline-size: 35px;
+    inline-size: 350px;
     margin-block: 5px;
     block-size: 2px;
 }
 
 .burger-menu {
     position: absolute;
-    top: 60px;
-    right: 20px;
     background-color: var(--second-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .burger-menu ul {
@@ -155,6 +153,7 @@ body {
     color: var(--third-color);
     text-decoration: none;
     font-size: 18px;
+    transition: left 0.5s ease;
 }
 
 .burger-menu a:hover {
@@ -200,7 +199,7 @@ body {
         margin-right: 5%;
         text-align: right;
         position: absolute;
-        top: 1%;
+        top: 10px;
         margin-left: 75%;
         display: block;
     }
@@ -311,6 +310,10 @@ body {
     .main li {
         display: none;
     }
+
+    .burger-menu {
+        top: 160px;
+    }
 }
 
 @media only screen and (max-width: 580px) {
@@ -352,7 +355,7 @@ body {
         margin-right: 5%;
         text-align: right;
         position: absolute;
-        top: 1%;
+        top: 8px;
         margin-left: 70%;
         display: block;
     }
@@ -376,7 +379,6 @@ body {
     .main li {
         display: none;
     }
-
 }
 
 @media only screen and (max-width: 330px) {
@@ -418,7 +420,7 @@ body {
         margin-right: 5%;
         text-align: right;
         position: absolute;
-        top: 1%;
+        top: 5px;
         margin-left: 70%;
         display: block;
     }
