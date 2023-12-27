@@ -100,13 +100,6 @@ body {
     justify-content: center;
 }
 
-.main p {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 2%;
-    margin-right: 2%;
-}
-
 .main {
     color: var(--third-color);
     margin-top: 1%;
@@ -131,6 +124,41 @@ body {
     font-size: 100%;
     text-decoration: none;
     vertical-align: middle;
+}
+
+.menu-line {
+    background-color: var(--third-color);
+    inline-size: 24px;
+    margin-block: 5px;
+    block-size: 2px;
+}
+
+.burger-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--second-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.burger-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.burger-menu li {
+    padding: 10px;
+}
+
+.burger-menu a {
+    color: var(--third-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.burger-menu a:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -191,6 +219,14 @@ body {
     
     .phone-numbers p {
         margin-bottom: 0;
+    }
+
+    .menu-line {
+        display: none;
+    }
+
+    .burger-menu {
+        display: none;
     }
 }
 
@@ -253,6 +289,28 @@ body {
     .phone-numbers p {
         margin-bottom: 0;
     }
+
+    .menu-line {
+        display: none;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .menu-line {
+        display: block;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .main li {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 580px) {
@@ -314,4 +372,76 @@ body {
     .phone-numbers p {
         margin-bottom: 0;
     }
+
+    .main li {
+        display: none;
+    }
+
 }
+
+@media only screen and (max-width: 330px) {
+    .logo-name {
+        display: flex;
+        padding: 0.5%;
+        align-items: center;
+        margin-top: 2%;
+        margin-left: 9.5%;
+        margin-bottom: 1.5%;
+    }
+    
+    .logo {
+        margin-right: 1%;
+        display: block;
+    }
+    
+    .logo img {
+        height: 35px;
+        width: 35px;
+    }
+    
+    .name-company {
+        font-size: 7px;
+        font-weight: bold;
+    }
+    
+    .slogan {
+        font-size: 25%;
+    }
+    
+    .name-slogan p {
+        margin-bottom: 8%;
+        margin-top: -3%;
+    }
+    
+    .contact-info {
+        font-size: 55%;
+        margin-right: 5%;
+        text-align: right;
+        position: absolute;
+        top: 1%;
+        margin-left: 70%;
+        display: block;
+    }
+    
+    .contact-info a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 85%;
+    }
+    
+    .phone-numbers {
+        display: flex;
+        padding: 0;
+        font-size: 100%;
+    }
+    
+    .phone-numbers p {
+        margin-bottom: 0;
+    }
+
+    .main li {
+        display: none;
+    }
+
+}
+

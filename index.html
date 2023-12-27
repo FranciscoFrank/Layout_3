@@ -7,7 +7,7 @@
     <title>Компанія</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap">
 </head>
 <body>
@@ -36,6 +36,20 @@
         </div>
     </div>
     <div class="menu">
+        <div class="burger-icon">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </div>
+        <div class="burger-menu">
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Доставка та оплата</a></li>
+                <li><a href="#">Прайс-лист</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </div>
         <ul class="main">
             <li><a href="#">Головна</a></li>
             <li>|</li>
@@ -48,5 +62,46 @@
             <li><a href="#">Контакти</a></li>
         </ul>
     </div>
+    <div class="slider">
+    </div>
+    <div class="content">
+    </div>
+    <div class="footer">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerIcon = document.querySelector('.menu-line');
+            const burgerMenu = document.querySelector('.burger-menu');
+    
+            burgerIcon.addEventListener('click', function () {
+                burgerMenu.style.display = (burgerMenu.style.display === 'flex') ? 'none' : 'flex';
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerIcon = document.querySelector('.menu-line');
+            const burgerMenu = document.querySelector('.burger-menu');
+
+            burgerIcon.addEventListener('click', function () {
+                toggleBurgerMenu();
+    });
+
+        document.addEventListener('click', function (event) {
+            const isClickInsideBurgerMenu = burgerMenu.contains(event.target);
+            const isClickInsideBurgerIcon = burgerIcon.contains(event.target);
+
+            if (!isClickInsideBurgerMenu && !isClickInsideBurgerIcon) {
+                closeBurgerMenu();
+            }
+    });
+
+        function toggleBurgerMenu() {
+            burgerMenu.style.display = (burgerMenu.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        function closeBurgerMenu() {
+            burgerMenu.style.display = 'none';
+        }
+});
+    </script>
 </body>
 </html>
