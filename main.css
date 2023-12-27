@@ -133,6 +133,67 @@ body {
     vertical-align: middle;
 }
 
+@media only screen and (max-width: 1600px) {
+    .logo-name {
+        display: flex;
+        padding: 0.5%;
+        align-items: center;
+        margin-top: 2%;
+        margin-left: 12%;
+        margin-bottom: 1.5%;
+    }
+    
+    .logo {
+        margin-right: 1%;
+        display: block;
+    }
+    
+    .logo img {
+        height: 70px;
+        width: 70px;
+    }
+    
+    .name-company {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .slogan {
+        font-size: 65%;
+    }
+    
+    .name-slogan p {
+        margin-bottom: 8%;
+        margin-top: -3%;
+    }
+    
+    .contact-info {
+        font-size: 55%;
+        margin-right: 5%;
+        text-align: right;
+        position: absolute;
+        top: 1%;
+        margin-left: 75%;
+        display: block;
+    }
+    
+    .contact-info a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 160%;
+    }
+    
+    .phone-numbers {
+        display: flex;
+        padding: 0;
+        font-size: 260%;
+    }
+    
+    .phone-numbers p {
+        margin-bottom: 0;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .logo-name {
         display: flex;
@@ -168,7 +229,7 @@ body {
     }
     
     .contact-info {
-        font-size: 60%;
+        font-size: 80%;
         margin-right: 5%;
         text-align: right;
         position: absolute;
@@ -180,13 +241,13 @@ body {
     .contact-info a {
         text-decoration: none;
         font-weight: bold;
-        font-size: 130%;
+        font-size: 95%;
     }
     
     .phone-numbers {
         display: flex;
         padding: 0;
-        font-size: 190%;
+        font-size: 170%;
     }
     
     .phone-numbers p {
