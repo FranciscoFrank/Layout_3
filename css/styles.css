@@ -128,7 +128,7 @@ body {
 
 .menu-line {
     background-color: var(--third-color);
-    inline-size: 24px;
+    inline-size: 35px;
     margin-block: 5px;
     block-size: 2px;
 }
