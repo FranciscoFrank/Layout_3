@@ -125,6 +125,7 @@ body {
 }
 
 .burger-menu {
+    display: none;
     position: absolute;
     background-color: var(--second-color);
     left: 50%;
