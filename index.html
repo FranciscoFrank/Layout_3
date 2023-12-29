@@ -6,6 +6,7 @@
     <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
     <title>Компанія</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script type="text/javascript" src="javascript/script.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap">
@@ -68,32 +69,5 @@
     </div>
     <div class="footer">
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    const burgerIcon = document.querySelector('.menu-line');
-    const burgerMenu = document.querySelector('.burger-menu');
-
-    burgerIcon.addEventListener('click', function () {
-        toggleBurgerMenu();
-    });
-
-    document.addEventListener('click', function (event) {
-        const isClickInsideBurgerMenu = burgerMenu.contains(event.target);
-        const isClickInsideBurgerIcon = burgerIcon.contains(event.target);
-
-        if (!isClickInsideBurgerMenu && !isClickInsideBurgerIcon) {
-            closeBurgerMenu();
-        }
-    });
-
-    function toggleBurgerMenu() {
-        burgerMenu.style.display = (burgerMenu.style.display === 'flex') ? 'none' : 'flex';
-    }
-
-    function closeBurgerMenu() {
-        burgerMenu.style.display = 'none';
-    }
-});
-    </script>
 </body>
 </html>

@@ -44,14 +44,12 @@ body {
 
 .name-company {
     font-family: 'PT Sans', sans-serif;
-    font-size: 35px;
     font-weight: bold;
     color: var(--second-color);
 }
 
 .slogan {
     color: var(--second-color);
-    font-size: 125%;
 }
 
 .name-slogan p {
@@ -60,7 +58,6 @@ body {
 }
 
 .contact-info {
-    font-size: 120%;
     color: var(--second-color);
     margin-right: 10%;
     text-align: right;
@@ -74,7 +71,6 @@ body {
     color: var(--second-color);
     text-decoration: none;
     font-weight: bold;
-    font-size: 100%;
 }
 
 .contact-info a:hover {
@@ -86,7 +82,7 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
     flex-direction: column;
     padding: 0;
-    font-size: 150%;
+
 }
 
 .phone-numbers p {
@@ -104,14 +100,10 @@ body {
     color: var(--third-color);
     margin-top: 1%;
     margin-bottom: 1%;
-    display: flex;
+    display: block;
     font-size: 25px;
     align-items: center;
     justify-content: center;
-}
-
-.main a:hover {
-    text-decoration: underline;
 }
 
 .main li {
@@ -121,7 +113,6 @@ body {
 
 .main a {
     color: var(--third-color);
-    font-size: 100%;
     text-decoration: none;
     vertical-align: middle;
 }
@@ -160,85 +151,84 @@ body {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 1600px) {
+/*Для екранів від 2300 пікселів */
+@media only all and (min-width: 2300px) {
+    .logo img {
+        height: 145px;
+        width: 145px;
+    }
+
+    .name-company {
+        font-size: 40px;
+    }
+
+    .slogan {
+        font-size: 145%;
+    }
+
+    .contact-info {
+        font-size: 55%;
+        top: 10px;
+        margin-left: 75%;
+    }
+    
+    .contact-info a {
+        font-size: 350%;
+    }
+    
+    .phone-numbers {
+        font-size: 540%;
+    }
+
+    .main {
+        font-size: 35px;
+    }
+
+    .menu-line {
+        display: none;
+    }
+}
+
+/*Для екранів від 1200 до 2300 пікселів*/
+@media only all and (max-width: 2300px) {
     .logo-name {
-        display: flex;
-        padding: 0.5%;
-        align-items: center;
-        margin-top: 2%;
-        margin-left: 12%;
         margin-bottom: 1.5%;
     }
     
-    .logo {
-        margin-right: 1%;
-        display: block;
-    }
-    
     .logo img {
-        height: 70px;
-        width: 70px;
+        height: 95px;
+        width: 95px;
     }
     
     .name-company {
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 25px;
     }
     
     .slogan {
         font-size: 75%;
     }
     
-    .name-slogan p {
-        margin-bottom: 8%;
-        margin-top: -3%;
-    }
-    
     .contact-info {
         font-size: 55%;
-        margin-right: 5%;
-        text-align: right;
-        position: absolute;
         top: 10px;
         margin-left: 75%;
-        display: block;
     }
     
     .contact-info a {
-        text-decoration: none;
-        font-weight: bold;
         font-size: 160%;
     }
     
     .phone-numbers {
-        display: flex;
-        padding: 0;
-        font-size: 260%;
-    }
-    
-    .phone-numbers p {
-        margin-bottom: 0;
+        font-size: 290%;
     }
 
     .menu-line {
         display: none;
     }
+} 
 
-    .burger-menu {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .logo-name {
-        display: flex;
-        padding: 0.5%;
-        align-items: center;
-        margin-top: 2%;
-        margin-left: 12%;
-        margin-bottom: 3%;
-    }
-    
+/*Для екранів від 700 до 1200 пікселів*/
+@media only all and (max-width: 1200px) {
     .logo {
         margin-right: 1%;
         display: block;
@@ -251,60 +241,37 @@ body {
     
     .name-company {
         font-size: 15px;
-        font-weight: bold;
     }
     
     .slogan {
         font-size: 65%;
     }
     
-    .name-slogan p {
-        margin-bottom: 8%;
-        margin-top: -3%;
-    }
-    
     .contact-info {
         font-size: 80%;
-        margin-right: 5%;
-        text-align: right;
-        position: absolute;
-        top: 1%;
         margin-left: 70%;
-        display: block;
     }
     
     .contact-info a {
-        text-decoration: none;
-        font-weight: bold;
         font-size: 95%;
     }
     
     .phone-numbers {
-        display: flex;
-        padding: 0;
         font-size: 170%;
-    }
-    
-    .phone-numbers p {
-        margin-bottom: 0;
     }
 
     .menu-line {
-        display: none;
-    }
-
-    .burger-menu {
         display: none;
     }
 }
 
-@media only screen and (max-width: 900px) {
+/*Введення бургер меню */
+@media only all and (max-width: 900px) {
     .menu-line {
         display: block;
-    }
-
-    .burger-menu {
-        display: none;
+        inline-size: 350px;
+        margin-block: 5px;
+        block-size: 2px;
     }
 
     .main li {
@@ -312,23 +279,31 @@ body {
     }
 
     .burger-menu {
-        top: 160px;
+        display: none;
     }
 }
 
-@media only screen and (max-width: 580px) {
+/*Зміни для нормального відображення номерів телефону та тексту "Зворотній зв'язок" між 1200 та 600 пікселями*/
+@media only all and (max-width: 700px) {
+    .contact-info {
+        font-size: 65%;
+    }
+    
+    .contact-info a {
+            font-size: 100%;
+    }
+
+    .phone-numbers {
+        font-size: 150%;
+    }
+}
+
+/*Для екранів від 400 до 600 пікселів*/
+@media only all and (max-width: 600px) {
     .logo-name {
-        display: flex;
-        padding: 0.5%;
-        align-items: center;
         margin-top: 2%;
         margin-left: 9.5%;
         margin-bottom: 1.5%;
-    }
-    
-    .logo {
-        margin-right: 1%;
-        display: block;
     }
     
     .logo img {
@@ -338,64 +313,40 @@ body {
     
     .name-company {
         font-size: 10px;
-        font-weight: bold;
     }
     
     .slogan {
         font-size: 50%;
     }
     
-    .name-slogan p {
-        margin-bottom: 8%;
-        margin-top: -3%;
-    }
-    
     .contact-info {
         font-size: 55%;
-        margin-right: 5%;
-        text-align: right;
-        position: absolute;
-        top: 8px;
-        margin-left: 70%;
-        display: block;
     }
     
     .contact-info a {
-        text-decoration: none;
-        font-weight: bold;
         font-size: 100%;
     }
     
     .phone-numbers {
-        display: flex;
-        padding: 0;
         font-size: 140%;
     }
-    
-    .phone-numbers p {
-        margin-bottom: 0;
+
+    .burger-menu {
+        display: none;
     }
 
     .main li {
         display: none;
     }
+
+    .menu-line {
+        display: block;
+        inline-size: 300px;
+    }
 }
 
-@media only screen and (max-width: 330px) {
-    .logo-name {
-        display: flex;
-        padding: 0.5%;
-        align-items: center;
-        margin-top: 2%;
-        margin-left: 9.5%;
-        margin-bottom: 1.5%;
-    }
-    
-    .logo {
-        margin-right: 1%;
-        display: block;
-    }
-    
+/*Для екранів до 400 пікселів*/
+@media only all and (max-width: 400px) {
     .logo img {
         height: 35px;
         width: 35px;
@@ -403,47 +354,78 @@ body {
     
     .name-company {
         font-size: 7px;
-        font-weight: bold;
     }
     
     .slogan {
         font-size: 25%;
     }
     
-    .name-slogan p {
-        margin-bottom: 8%;
-        margin-top: -3%;
-    }
-    
     .contact-info {
         font-size: 55%;
-        margin-right: 5%;
-        text-align: right;
-        position: absolute;
         top: 5px;
-        margin-left: 70%;
-        display: block;
     }
     
     .contact-info a {
-        text-decoration: none;
-        font-weight: bold;
         font-size: 85%;
     }
     
     .phone-numbers {
-        display: flex;
-        padding: 0;
         font-size: 100%;
     }
-    
-    .phone-numbers p {
-        margin-bottom: 0;
+
+    .burger-menu {
+        display: none;
     }
 
     .main li {
         display: none;
     }
 
+    .menu-line {
+        display: block;
+        inline-size: 250px;
+    }
+
 }
 
+/*Для екранів до 300 пікселів*/
+@media only all and (max-width: 300px) {
+    
+    .logo img {
+        height: 25px;
+        width: 25px;
+    }
+    
+    .name-company {
+        font-size: 5px;
+    }
+    
+    .slogan {
+        font-size: 25%;
+    }
+ 
+    .contact-info {
+        font-size: 50%;
+    }
+    
+    .contact-info a {
+        font-size: 60%;
+    }
+    
+    .phone-numbers {
+        font-size: 80%;
+    }
+    
+    .burger-menu {
+        display: none;
+    }
+
+    .main li {
+        display: none;
+    }
+    
+    .menu-line {
+        display: block;
+        inline-size: 150px;
+    }
+}
