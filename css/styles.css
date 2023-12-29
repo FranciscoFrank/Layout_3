@@ -133,10 +133,11 @@ body {
     position: absolute;
     background-color: var(--second-color);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(100%);
+    transform: translateY(25%);
 }
 
-.burger-menu ul {
+.burger-menu nav {
     list-style: none;
     padding: 0;
 }
@@ -210,7 +211,7 @@ body {
     }
     
     .slogan {
-        font-size: 75%;
+        font-size: 105%;
     }
     
     .contact-info {
@@ -224,7 +225,7 @@ body {
     }
     
     .phone-numbers {
-        font-size: 290%;
+        font-size: 300%;
     }
 
     .menu-line {
@@ -432,5 +433,47 @@ body {
     .menu-line {
         display: block;
         inline-size: 150px;
+    }
+}
+
+/*Для екранів до 300 пікселів*/
+@media only all and (max-width: 240px) {
+    
+    .logo img {
+        height: 25px;
+        width: 25px;
+    }
+    
+    .name-company {
+        font-size: 5px;
+    }
+    
+    .slogan {
+        font-size: 25%;
+    }
+ 
+    .contact-info {
+        font-size: 40%;
+    }
+    
+    .contact-info a {
+        font-size: 25%;
+    }
+    
+    .phone-numbers {
+        font-size: 80%;
+    }
+    
+    .burger-menu {
+        display: none;
+    }
+
+    .main li {
+        display: none;
+    }
+    
+    .menu-line {
+        display: block;
+        inline-size: 130px;
     }
 }
