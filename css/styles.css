@@ -118,6 +118,7 @@ body {
 }
 
 .burger-line {
+    position: relative;
     background-color: var(--third-color);
     inline-size: 30px;
     margin-block: 5px;
@@ -125,33 +126,27 @@ body {
     transition: all 0.3s ease;
 }
 
-.burger-icon.active .burger-line:nth-child(2) {
-    opacity: 0;
-}
-
-.burger-icon.active .burger-line:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-
-.burger-icon.active .burger-line:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-.burger-icon.active .burger-line {
-    background-color: var(--first-color);
+.burger-menu {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background: var(--second-color);
+    transform: translateX(-100%);
+    transition: transform 0.5s; 
+    text-align: center;
+    white-space: nowrap;
 }
 
 .burger-menu {
 	position: fixed;
 	top: 0;
 	left: 0;
-    width: 35%;
+    width: 100%;
 	height: 100%;
 	padding: 15px;
     background: var(--second-color);
 	transform: translateX(-100%);
 	transition: transform 0.5s; 
-    z-index: 2;
     text-align: center;
     white-space: nowrap;
 }
@@ -168,7 +163,7 @@ body {
 .burger-menu a {
     color: var(--third-color);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .burger-menu a:hover {
@@ -179,19 +174,32 @@ body {
 	transform: translateX(0);
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 1;
+.burger-menu.active .burger-icon-close {
+    display: block;
 }
 
-.burger-menu.active + .overlay {
-    display: block; 
+.burger-icon-close {
+    z-index: 1;
+    display: block;
+    position: fixed;
+    top: 2em;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-120%);
+    transition: transform 0.5s; 
+}
+
+.burger-menu.active ~ .burger-icon-close {
+    transform: translateX(0%);
+}
+
+.burger-icon-close .burger-line:nth-child(2) {
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+.burger-icon-close .burger-line:nth-child(1) {
+    transform: translateY(2px) rotate(45deg);
 }
 
 /*If the screen width is more 2400 pixels*/
@@ -490,98 +498,6 @@ body {
         display: block;
     }
 }
- 
-/*Edits for the burger menu*/
-@media only all {
-    @media only all and (max-width: 585px) {
-        .burger-menu a {
-            font-size: 14px;
-        }
-    }
-
-    @media only all and (max-width: 480px) {
-        .burger-menu a {
-            font-size: 12px;
-            padding: 4px;
-        }
-    }
-
-    @media only all and (max-width: 430px) {
-        .burger-menu a {
-            font-size: 10px;
-        }
-
-        .burger-menu li {
-            padding: 4px;
-        }
-    }
-
-    /*Edits for the burger menu icon*/
-    @media only all and (max-width: 400px) {
-        .burger-menu {
-            transform: translateX(-150%);
-        }
-
-        .burger-icon.active .burger-line:nth-child(1) {
-            transform: translateY(4px) rotate(45deg);
-        }
-        
-        .burger-icon.active .burger-line:nth-child(3) {
-            transform: translateY(-4px) rotate(-45deg);
-        }
-    }
-
-    @media only all and (max-width: 385px) {
-        .burger-menu a {
-            font-size: 8px;
-        }
-
-        .burger-menu li {
-            padding: 2px;
-        }
-    }
-
-    @media only all and (max-width: 350px) {
-        .burger-menu a {
-            font-size: 8px;
-        }
-
-        .burger-menu li {
-            padding: 2px;
-        }
-    }
-
-    @media only all and (max-width: 340px) {
-        .burger-line {
-            inline-size: 25px;
-        }
-        
-        .burger-menu a {
-            font-size: 8px;
-            padding: 0px;
-        }
-    }
-
-    @media only all and (max-width: 305px) {
-        .burger-menu a {
-            font-size: 8px;
-        }
-
-        .burger-menu li {
-            padding: 0px;
-        }
-    }
-
-    @media only all and (max-width: 240px) {
-        .burger-menu a {
-            font-size: 5px;
-        }
-
-        .burger-menu li {
-            padding: 0;
-        }
-    }
-}
 
 /*If the screen width is in the range 490 - 550 pixels*/
 @media only all and (max-width: 550px) {
@@ -690,5 +606,15 @@ body {
 
     .feedback a {
         font-size: 5px;
+    }
+}
+
+@media only all and (min-width: 400px) {
+    .burger-icon-close .burger-line:nth-child(1) {
+        transform: translateY(3.5px) rotate(45deg);
+    }
+
+    .burger-icon-close .burger-line:nth-child(2) {
+        transform: translateY(-3.5px) rotate(-45deg);
     }
 }
