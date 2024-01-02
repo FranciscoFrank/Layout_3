@@ -527,41 +527,52 @@ body {
 
     @media only all and (max-width: 385px) {
         .burger-menu a {
-            font-size: 10px;
+            font-size: 8px;
         }
 
         .burger-menu li {
-            padding: 10px;
+            padding: 4px;
         }
     }
 
-    @media only all and (max-width: 375px) {
-        .burger-menu {
-            padding: 8px;
+    @media only all and (max-width: 350px) {
+        .burger-menu a {
+            font-size: 8px;
+        }
+
+        .burger-menu li {
+            padding: 2px;
         }
     }
 
-    @media only all and (max-width: 335px) {
+    @media only all and (max-width: 340px) {
         .burger-line {
             inline-size: 25px;
         }
         
         .burger-menu a {
-            font-size: 8px;
-        }
-    
-        .burger-menu li {
-            padding: 5px;
+            font-size: 6px;
+            padding: 2px;
         }
     }
 
-    @media only all and (max-width: 270px) {
+    @media only all and (max-width: 305px) {
         .burger-menu a {
             font-size: 6px;
         }
-        
+
         .burger-menu li {
             padding: 1px;
+        }
+    }
+
+    @media only all and (max-width: 240px) {
+        .burger-menu a {
+            font-size: 5px;
+        }
+
+        .burger-menu li {
+            padding: 0;
         }
     }
 }
