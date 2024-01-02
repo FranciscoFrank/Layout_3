@@ -162,7 +162,7 @@ body {
 }
 
 .burger-menu li {
-    padding: 10px;
+    padding: 6px;
 }
 
 .burger-menu a {
@@ -194,7 +194,7 @@ body {
     display: block; 
 }
 
-/*Для > 2400 пікселів*/
+/*If the screen width is more 2400 pixels*/
 @media only all and (min-width: 2400px) {
     .logo-name {
         margin-left: 10%;
@@ -226,7 +226,7 @@ body {
     }
 }
 
-/*Для 2000 - 2400 пікселів*/
+/*If the screen width is in the range 2000 - 2400 pixels*/
 @media only all and (max-width: 2400px) {
     .logo-name {
         margin-left: 10%;
@@ -258,7 +258,7 @@ body {
     }
 }
 
-/*Для 1800 - 2000 пікселів*/
+/*If the screen width is in the range 1800 - 2000 pixels*/
 @media only all and (max-width: 2000px) {
     .logo-name {
         margin-left: 10%;
@@ -290,7 +290,7 @@ body {
     }
 }
 
-/*Для 1600 - 1800 пікселів*/
+/*If the screen width is in the range 1600 - 1800 pixels*/
 @media only all and (max-width: 1800px) {
     .logo-name {
         margin-left: 10%;
@@ -322,7 +322,7 @@ body {
     }
 }
 
-/*Для 1400 - 1600 пікселів*/
+/*If the screen width is in the range 1400 - 1600 pixels*/
 @media only all and (max-width: 1600px) {
     .logo-name {
         margin-left: 10%;
@@ -354,7 +354,7 @@ body {
     }
 }
 
-/*Для 1200 - 1400 пікселів пікселів*/
+/*If the screen width is in the range 1200 - 1400 pixels*/
 @media only all and (max-width: 1400px) {
     .logo-name {
         margin-left: 10%;
@@ -386,7 +386,7 @@ body {
     }
 }
 
-/*Для 815 - 1200 пікселів*/
+/*If the screen width is in the range 815 - 1200 pixels*/
 @media only all and (max-width: 1200px) {
     .logo-name {
         margin-left: 10%;
@@ -418,7 +418,7 @@ body {
     }
 }
 
-/*Для 650 - 815 пікселів*/
+/*If the screen width is in the range 650 - 815 pixels*/
 @media only all and (max-width: 815px) {
     .logo-name {
         margin-left: 10%;
@@ -454,7 +454,7 @@ body {
     }
 }
 
-/*Для 550 - 650 пікселів*/
+/*If the screen width is in the range 550 - 650 pixels*/
 @media only all and (max-width: 650px) {
     .logo-name {
         margin-left: 10%;
@@ -491,7 +491,7 @@ body {
     }
 }
  
-/*Правки для burger-menu*/
+/*Edits for the burger menu*/
 @media only all {
     @media only all and (max-width: 585px) {
         .burger-menu a {
@@ -502,6 +502,7 @@ body {
     @media only all and (max-width: 480px) {
         .burger-menu a {
             font-size: 12px;
+            padding: 4px;
         }
     }
 
@@ -509,8 +510,13 @@ body {
         .burger-menu a {
             font-size: 10px;
         }
+
+        .burger-menu li {
+            padding: 4px;
+        }
     }
 
+    /*Edits for the burger menu icon*/
     @media only all and (max-width: 400px) {
         .burger-menu {
             transform: translateX(-150%);
@@ -531,7 +537,7 @@ body {
         }
 
         .burger-menu li {
-            padding: 4px;
+            padding: 2px;
         }
     }
 
@@ -551,18 +557,18 @@ body {
         }
         
         .burger-menu a {
-            font-size: 6px;
-            padding: 2px;
+            font-size: 8px;
+            padding: 0px;
         }
     }
 
     @media only all and (max-width: 305px) {
         .burger-menu a {
-            font-size: 6px;
+            font-size: 8px;
         }
 
         .burger-menu li {
-            padding: 1px;
+            padding: 0px;
         }
     }
 
@@ -577,7 +583,7 @@ body {
     }
 }
 
-/*Для 490 - 550 пікселів*/
+/*If the screen width is in the range 490 - 550 pixels*/
 @media only all and (max-width: 550px) {
     .logo img {
         height: 70px;
@@ -597,7 +603,7 @@ body {
     }
 }
 
-/*Для 400 - 490 пікселів*/ 
+/*If the screen width is in the range 400 - 490 pixels*/ 
 @media only all and (max-width: 490px) {
     .logo img {
         height: 55px;
@@ -622,7 +628,7 @@ body {
     }
 }
 
-/*Для 260 - 400 пікселів*/
+/*If the screen width is in the range 260 - 400 pixels*/
 @media only all and (max-width: 400px) {
     .logo img {
         height: 40px;
@@ -657,7 +663,7 @@ body {
     }
 }
 
-/*Для 190 - 260 пікселів*/
+/*If the screen width is  pixels*/
 @media only all and (max-width: 260px) {
     .logo img {
         height: 30px;
