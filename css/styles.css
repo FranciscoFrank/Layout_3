@@ -1,7 +1,7 @@
 :root {
-    --first-color: lightgray;
-    --second-color: gray;
-    --third-color: white;
+    --first-color: #dcdcdc;
+    --second-color: #767676;
+    --third-color: #ffffff;
 }
 
 * {
@@ -11,12 +11,15 @@
 }
 
 body {
-    background-color: var(--first-color);
+    background-color: var(--third-color);
     padding: 0;
     margin: 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    color: var(--second-color);
 }
 
-.header {
+header {
     background-color: var(--first-color);
     width: 100%;
     height: 100%;
@@ -25,11 +28,9 @@ body {
 .logo-name {
     background-color: var(--first-color);
     display: flex;
-    padding: 0.5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     align-items: center;
-    margin-top: 2%;
-    margin-left: 12%;
-    margin-bottom: 3%;
 }
 
 .logo {
@@ -39,7 +40,9 @@ body {
 
 .name-company {
     font-family: 'PT Sans', sans-serif;
+    display: flex;
     font-weight: bold;
+    padding-right: 1%;
     color: var(--second-color);
 }
 
@@ -58,7 +61,7 @@ body {
     text-align: right;
     position: absolute;
     top: 10px;
-    margin-left: 70%;
+    right: 5%;
     display: block;
 }
 
@@ -232,6 +235,77 @@ body {
 
 .slick-next {
     right: 10%;
+}
+
+.content a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.content .left-content {
+    height: 100%;
+    width: 30%;
+    background-color: var(--third-color);
+}
+
+.content .center-content {
+    height: 100%;
+    width: 70%;
+}
+
+.navigation-goods {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.categories a:hover {
+    text-decoration: underline;
+}
+  
+.category-item {
+    cursor: pointer;
+    position: relative;
+}
+
+.subcategories {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;    
+    transition: transform 0.5s; 
+}
+
+.subcategories a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.subcategories a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.category-item:hover .subcategories {
+    display: block;
+}
+  
+.subcategory-item {
+    padding: 8px;
 }
 
 @media only all {
