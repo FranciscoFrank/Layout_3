@@ -88,7 +88,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
 }
 
@@ -127,28 +127,17 @@ body {
 }
 
 .burger-menu {
+    z-index: 2; 
     width: 100%;
     height: 100%;
-    padding: 15px;
     background: var(--second-color);
     transform: translateX(-100%);
     transition: transform 0.5s; 
     text-align: center;
     white-space: nowrap;
-}
-
-.burger-menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-    width: 100%;
-	height: 100%;
-	padding: 15px;
-    background: var(--second-color);
-	transform: translateX(-100%);
-	transition: transform 0.5s; 
-    text-align: center;
-    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .burger-menu nav {
@@ -157,6 +146,7 @@ body {
 }
 
 .burger-menu li {
+    list-style: none;
     padding: 6px;
 }
 
@@ -179,14 +169,14 @@ body {
 }
 
 .burger-icon-close {
-    z-index: 1;
+    z-index: 3;
     display: block;
     position: fixed;
     top: 2em;
     text-align: center;
     width: 30px;
     height: 30px;
-    transform: translateX(-120%);
+    transform: translateX(-300%);
     transition: transform 0.5s; 
 }
 
@@ -195,426 +185,510 @@ body {
 }
 
 .burger-icon-close .burger-line:nth-child(2) {
-    transform: translateY(-2px) rotate(-45deg);
+    transform: translateY(-3.5px) rotate(-45deg);
 }
 
 .burger-icon-close .burger-line:nth-child(1) {
-    transform: translateY(2px) rotate(45deg);
+    transform: translateY(3.5px) rotate(45deg);
 }
 
-/*If the screen width is more 2400 pixels*/
-@media only all and (min-width: 2400px) {
-    .logo-name {
-        margin-left: 10%;
-    }
-    
-    .logo-name img {
-        width: 240px;
-        height: 240px;
-    }
-
-    .name-company {
-        font-size: 50px;
-    }
-
-    .slogan {
-        font-size: 40px;
-    }
-
-    .phone-numbers {
-        font-size: 60px;
-    }
-
-    .feedback a {
-        font-size: 40px;
-    }
-
-    .main-menu a {
-        font-size: 55px;
-    }
+.slider {
+    width: 100%;
+    margin: 0 auto;
 }
 
-/*If the screen width is in the range 2000 - 2400 pixels*/
-@media only all and (max-width: 2400px) {
-    .logo-name {
-        margin-left: 10%;
-    }
-    
-    .logo-name img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .name-company {
-        font-size: 40px;
-    }
-
-    .slogan {
-        font-size: 30px;
-    }
-
-    .phone-numbers {
-        font-size: 50px;
-    }
-
-    .feedback a {
-        font-size: 35px;
-    }
-
-    .main-menu a {
-        font-size: 45px;
-    }
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-/*If the screen width is in the range 1800 - 2000 pixels*/
-@media only all and (max-width: 2000px) {
-    .logo-name {
-        margin-left: 10%;
-    }
-    
-    .logo-name img {
-        width: 170px;
-        height: 170px;
-    }
-
-    .name-company {
-        font-size: 35px;
-    }
-
-    .slogan {
-        font-size: 25px;
-    }
-
-    .phone-numbers {
-        font-size: 35px;
-    }
-
-    .feedback a {
-        font-size: 25px;
-    }
-
-    .main-menu a {
-        font-size: 35px;
-    }
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    max-width: 100vw;
+    transition: opacity 0.5s ease-in-out;
 }
 
-/*If the screen width is in the range 1600 - 1800 pixels*/
-@media only all and (max-width: 1800px) {
-    .logo-name {
-        margin-left: 10%;
-    }
-    
-    .logo-name img {
-        width: 170px;
-        height: 170px;
-    }
-
-    .name-company {
-        font-size: 35px;
-    }
-
-    .slogan {
-        font-size: 25px;
-    }
-
-    .phone-numbers {
-        font-size: 35px;
-    }
-
-    .feedback a {
-        font-size: 25px;
-    }
-
-    .main-menu a {
-        font-size: 35px;
-    }
+.slick-active {
+    transition: opacity 0.5s ease-in-out;
 }
 
-/*If the screen width is in the range 1400 - 1600 pixels*/
-@media only all and (max-width: 1600px) {
-    .logo-name {
-        margin-left: 10%;
-    }
-    
-    .logo-name img {
-        width: 145px;
-        height: 145px;
-    }
-
-    .name-company {
-        font-size: 35px;
-    }
-
-    .slogan {
-        font-size: 25px;
-    }
-
-    .phone-numbers {
-        font-size: 35px;
-    }
-
-    .feedback a {
-        font-size: 25px;
-    }
-
-    .main-menu a {
-        font-size: 35px;
-    }
+.slick-prev,
+.slick-next {
+    all: initial;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; 
+    border: none;
 }
 
-/*If the screen width is in the range 1200 - 1400 pixels*/
-@media only all and (max-width: 1400px) {
-    .logo-name {
-        margin-left: 10%;
-    }
-    
-    .logo-name img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .name-company {
-        font-size: 30px;
-    }
-
-    .slogan {
-        font-size: 20px;
-    }
-
-    .phone-numbers {
-        font-size: 30px;
-    }
-
-    .feedback a {
-        font-size: 20px;
-    }
-
-    .main-menu a {
-        font-size: 25px;
-    }
+.slick-prev {
+    left: 10%;
 }
 
-/*If the screen width is in the range 815 - 1200 pixels*/
-@media only all and (max-width: 1200px) {
-    .logo-name {
-        margin-left: 10%;
-    }
-    
-    .logo-name img {
-        width: 95px;
-        height: 95px;
-    }
-
-    .name-company {
-        font-size: 25px;
-    }
-
-    .slogan {
-        font-size: 15px;
-    }
-
-    .phone-numbers {
-        font-size: 25px;
-    }
-
-    .feedback a {
-        font-size: 15px;
-    }
-
-    .main-menu a {
-        font-size: 20px;
-    }
+.slick-next {
+    right: 10%;
 }
 
-/*If the screen width is in the range 650 - 815 pixels*/
-@media only all and (max-width: 815px) {
-    .logo-name {
-        margin-left: 10%;
-    }
-    
-    .logo-name img {
-        width: 90px;
-        height: 90px;
+@media only all {
+    /*If the screen width is the more than 2000 pixels*/
+    @media only all and (min-width: 2000px) {
+        .logo-name {
+            margin-left: 10%;
+        }
+        
+        .logo-name img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .name-company {
+            font-size: 35px;
+        }
+
+        .slogan {
+            font-size: 25px;
+        }
+
+        .phone-numbers {
+            font-size: 45px;
+        }
+
+        .feedback a {
+            font-size: 25px;
+        }
+
+        .main-menu a {
+            font-size: 35px;
+        }
     }
 
-    .name-company {
-        font-size: 20px;
+    /*If the screen width is in the range 1800 - 2000 pixels*/
+    @media only all and (max-width: 2000px) {
+        .logo-name {
+            margin-left: 10%;
+        }
+        
+        .logo-name img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .name-company {
+            font-size: 35px;
+        }
+
+        .slogan {
+            font-size: 25px;
+        }
+
+        .phone-numbers {
+            font-size: 45px;
+        }
+
+        .feedback a {
+            font-size: 25px;
+        }
+
+        .main-menu a {
+            font-size: 35px;
+        }
     }
 
-    .slogan {
-        font-size: 15px;
+    /*If the screen width is in the range 1600 - 1800 pixels*/
+    @media only all and (max-width: 1800px){
+        .logo-name {
+            margin-left: 10%;
+        }
+        
+        .logo-name img {
+            width: 170px;
+            height: 170px;
+        }
+
+        .name-company {
+            font-size: 35px;
+        }
+
+        .slogan {
+            font-size: 25px;
+        }
+
+        .phone-numbers {
+            font-size: 35px;
+        }
+
+        .feedback a {
+            font-size: 25px;
+        }
+
+        .main-menu a {
+            font-size: 30px;
+        }
     }
 
-    .phone-numbers {
-        font-size: 20px;
+    /*If the screen width is in the range 1400 - 1600 pixels*/
+    @media only all and (max-width: 1600px) {
+        .logo-name {
+            margin-left: 10%;
+        }
+        
+        .logo-name img {
+            width: 145px;
+            height: 145px;
+        }
+
+        .name-company {
+            font-size: 30px;
+        }
+
+        .slogan {
+            font-size: 20px;
+        }
+
+        .phone-numbers {
+            font-size: 35px;
+        }
+
+        .feedback a {
+            font-size: 25px;
+        }
+
+        .main-menu a {
+            font-size: 30px;
+        }
     }
 
-    .feedback a {
-        font-size: 14px;
+    /*If the screen width is in the range 1200 - 1400 pixels*/
+    @media only all and (max-width: 1400px) {
+        .logo-name {
+            margin-left: 10%;
+        }
+        
+        .logo-name img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .name-company {
+            font-size: 30px;
+        }
+
+        .slogan {
+            font-size: 20px;
+        }
+
+        .phone-numbers {
+            font-size: 30px;
+        }
+
+        .feedback a {
+            font-size: 20px;
+        }
+
+        .main-menu a {
+            font-size: 25px;
+        }
     }
 
-    .main-menu {
-        display: none;
+    /*If the screen width is in the range 815 - 1200 pixels*/
+    @media only all and (max-width: 1200px) {
+        .logo-name {
+            margin-left: 10%;
+        }
+        
+        .logo-name img {
+            width: 95px;
+            height: 95px;
+        }
+
+        .name-company {
+            font-size: 25px;
+        }
+
+        .slogan {
+            font-size: 15px;
+        }
+
+        .phone-numbers {
+            font-size: 25px;
+        }
+
+        .feedback a {
+            font-size: 15px;
+        }
+
+        .main-menu a {
+            font-size: 20px;
+        }
     }
 
-    .burger-line {
-        display: block;
-    }
-}
+    /*If the screen width is in the range 650 - 815 pixels*/
+    @media only all and (max-width: 815px) {
+        .logo-name {
+            margin-left: 10%;
+        }
+        
+        .logo-name img {
+            width: 90px;
+            height: 90px;
+        }
 
-/*If the screen width is in the range 550 - 650 pixels*/
-@media only all and (max-width: 650px) {
-    .logo-name {
-        margin-left: 10%;
-    }
-    
-    .logo-name img {
-        width: 80px;
-        height: 80px;
-    }
+        .name-company {
+            font-size: 20px;
+        }
 
-    .name-company {
-        font-size: 20px;
-    }
+        .slogan {
+            font-size: 15px;
+        }
 
-    .slogan {
-        font-size: 13px;
-    }
+        .phone-numbers {
+            font-size: 20px;
+        }
 
-    .phone-numbers {
-        font-size: 17px;
-        margin-bottom: -3%;
-    }
+        .feedback a {
+            font-size: 14px;
+        }
 
-    .feedback a {
-        font-size: 11px;
-    }
+        .main-menu {
+            display: none;
+        }
 
-    .main-menu {
-        display: none;
-    }
-
-    .burger-line {
-        display: block;
-    }
-}
-
-/*If the screen width is in the range 490 - 550 pixels*/
-@media only all and (max-width: 550px) {
-    .logo img {
-        height: 70px;
-        width: 70px;
+        .burger-line {
+            display: block;
+        }
     }
 
-    .name-company {
-        font-size: 17px;
+    /*If the screen width is in the range 550 - 650 pixels*/
+    @media only all and (max-width: 650px) {
+        .logo-name {
+            margin-left: 10%;
+        }
+        
+        .logo-name img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .name-company {
+            font-size: 20px;
+        }
+
+        .slogan {
+            font-size: 13px;
+        }
+
+        .phone-numbers {
+            font-size: 17px;
+            margin-bottom: -3%;
+        }
+
+        .feedback a {
+            font-size: 11px;
+        }
+
+        .main-menu {
+            display: none;
+        }
+
+        .burger-line {
+            display: block;
+        }
     }
 
-    .slogan {
-        font-size: 11px;
+    /*If the screen width is in the range 490 - 550 pixels*/
+    @media only all and (max-width: 550px) {
+        .logo img {
+            height: 70px;
+            width: 70px;
+        }
+
+        .name-company {
+            font-size: 17px;
+        }
+
+        .slogan {
+            font-size: 11px;
+        }
+
+        .phone-numbers {
+            font-size: 15px;
+        }
     }
 
-    .phone-numbers {
-        font-size: 15px;
-    }
-}
+    /*If the screen width is in the range 400 - 490 pixels*/ 
+    @media only all and (max-width: 490px) {
+        .logo img {
+            height: 55px;
+            width: 55px;
+        }
 
-/*If the screen width is in the range 400 - 490 pixels*/ 
-@media only all and (max-width: 490px) {
-    .logo img {
-        height: 55px;
-        width: 55px;
-    }
+        .name-company {
+            font-size: 15px;
+        }
 
-    .name-company {
-        font-size: 15px;
-    }
+        .slogan {
+            font-size: 9px;
+        }
 
-    .slogan {
-        font-size: 9px;
-    }
+        .phone-numbers {
+            font-size: 12px;
+            margin-bottom: -6%;
+        }
 
-    .phone-numbers {
-        font-size: 12px;
-        margin-bottom: -6%;
-    }
+        .feedback a {
+            font-size: 8px;
+        }
 
-    .feedback a {
-        font-size: 8px;
-    }
-}
-
-/*If the screen width is in the range 260 - 400 pixels*/
-@media only all and (max-width: 400px) {
-    .logo img {
-        height: 40px;
-        width: 40px;
+        .menu {
+            padding: 10px;
+        }
     }
 
-    .name-company {
-        font-size: 9px;
+    /*If the screen width is in the range 260 - 400 pixels*/
+    @media only all and (max-width: 400px) {
+        .logo img {
+            height: 40px;
+            width: 40px;
+        }
+
+        .name-company {
+            font-size: 9px;
+        }
+
+        .slogan {
+            font-size: 7px;
+        }
+
+        .contact-info {
+            top: 7px;
+            margin-left: 67%;
+        }
+
+        .phone-numbers {
+            font-size: 9px;
+            margin-bottom: -12%;
+        }
+
+        .feedback a {
+            font-size: 6px;
+        }
     }
 
-    .slogan {
-        font-size: 7px;
+    /*If the screen width is  pixels*/
+    @media only all and (max-width: 260px) {
+        .logo img {
+            height: 30px;
+            width: 30px;
+        }
+
+        .name-company {
+            font-size: 7px;
+        }
+
+        .slogan {
+            font-size: 5px;
+        }
+
+        .contact-info {
+            top: 5px;
+            margin-left: 65%;
+        }
+
+        .phone-numbers {
+            font-size: 7px;
+            margin-bottom: -20%;
+        }
+
+        .feedback a {
+            font-size: 5px;
+        }
     }
 
-    .contact-info {
-        top: 7px;
-        margin-left: 67%;
+    /*Edits for the burger icon and burger menu*/
+    @media only all and (max-width: 400px) {
+        .burger-icon .burger-line {
+            inline-size: 15px;
+        }
+
+        .menu {
+
+            padding: 5px;
+        }
+
+        .burger-icon .burger-line {
+            margin-block: 2px;
+        }
+
+        .burger-menu a {
+            font-size: 15px;
+        }
+
+        .burger-icon-close {
+            width: 15px;
+            height: 15px;
+            top: 1em;
+        }
+
+        .burger-icon-close .burger-line {
+            inline-size: 15px;
+        }
+
+        .burger-icon-close .burger-line:nth-child(1) {
+            transform: translateY(3.5px) rotate(45deg);
+        }
+
+        .burger-icon-close .burger-line:nth-child(2) {
+            transform: translateY(-3.5px) rotate(-45deg);
+        }
     }
 
-    .phone-numbers {
-        font-size: 9px;
-        margin-bottom: -12%;
-    }
+    /*Edits for the slider*/
+    @media only all {
+        @media only all and (min-width: 2000px) {
+            .slick-prev img,
+            .slick-next img {
+                height: 95px;
+            }
+        }
 
-    .feedback a {
-        font-size: 6px;
-    }
+        @media only all and (max-width: 2000px) {
+            .slick-prev img,
+            .slick-next img {
+                height: 75px;
+            }
+        }
 
-    .burger-line {
-        margin-block: 2px;
-        block-size: 2px;
-    }
-}
+        @media only all and (max-width: 1600px) {
+            .slick-prev img,
+            .slick-next img {
+                height: 55px;
+            }
+        }
 
-/*If the screen width is  pixels*/
-@media only all and (max-width: 260px) {
-    .logo img {
-        height: 30px;
-        width: 30px;
-    }
+        @media only all and (max-width: 800px) {
+            .slick-prev img,
+            .slick-next img {
+                height: 35px;
+            }
+        }
 
-    .name-company {
-        font-size: 7px;
-    }
+        @media only all and (max-width: 450px) {
+            .slick-prev img,
+            .slick-next img {
+                height: 25px;
+            }
+        }
 
-    .slogan {
-        font-size: 5px;
-    }
-
-    .contact-info {
-        top: 5px;
-        margin-left: 65%;
-    }
-
-    .phone-numbers {
-        font-size: 7px;
-        margin-bottom: -20%;
-    }
-
-    .feedback a {
-        font-size: 5px;
-    }
-}
-
-@media only all and (min-width: 400px) {
-    .burger-icon-close .burger-line:nth-child(1) {
-        transform: translateY(3.5px) rotate(45deg);
-    }
-
-    .burger-icon-close .burger-line:nth-child(2) {
-        transform: translateY(-3.5px) rotate(-45deg);
+        @media only all and (max-width: 250px) {
+            .slick-prev img,
+            .slick-next img {
+                height: 15px;
+            }
+        }
     }
 }
