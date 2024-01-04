@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Компанія</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="javascript/script.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap">
@@ -85,33 +84,87 @@
         </div>
     </div>
     <div class="content">
-        <a href="#">Головна</a> / <a href="#">Каталог</a> / <a href="#">Побутова техніка</a>
+        <div class="breadcrumbs">
+            <a href="#">Головна</a>
+            / 
+            <a href="#">Каталог</a>
+            / 
+            <a href="#">Побутова техніка</a>
+        </div>
         <div class="left-content">
-            <div class="navigataion-goods">
+            <div class="navigation-goods">
                 <nav>
                     <ul class="categories">
                         <li class="category-item"><a href="#">Автомобілі</a></li>
                         <li class="category-item"><a href="#">Побутова техніка</a>
                             <ul class="subcategories">
-                                <li class="category-item"><a href="#">Мікрохвильовки</a></li>
-                                <li class="category-item"><a href="#">Холодильники</a></li>
-                                <li class="category-item"><a href="#">Посудомийні машини</a></li>
-                                <li class="category-item"><a href="#">Чайники</a></li>
+                                <li class="subcategory-item"><a href="#">Мікрохвильовки</a></li>
+                                <li class="subcategory-item"><a href="#">Холодильники</a></li>
+                                <li class="subcategory-item"><a href="#">Посудомийні машини</a></li>
+                                <li class="subcategory-item"><a href="#">Чайники</a></li>
                             </ul>
                         </li>
-                        <li class="category-item"><a href="#">Мобільна техніка</a></li>
+                        <li class="category-item"><a href="#">Мобільна техніка</a>
+                            <ul class="subcategories">
+                                <li class="subcategory-item"><a href="#">Чохли</a></li>
+                                <li class="subcategory-item"><a href="#">Карти пам'яті</a></li>
+                                <li class="subcategory-item"><a href="#">Захисні плівки та скло</a></li>
+                            </ul>
+                        </li>
                         <li class="category-item"><a href="#">Комп'ютери</a></li>
                         <li class="category-item"><a href="#">Одяг</a></li>
                         <li class="category-item"><a href="#">Нерухомість</a></li>
                     </ul>
                 </nav>
             </div>
+            <div class="price-list">
+                <div class="image-price-list">
+                    <img src="images/logo_price-list.jpg" alt="Прайс-лист">
+                </div>
+                <p>Прайс-лист</p>
+            </div>
         </div>        
         <div class="center-content">
-
+            <section class="products">
+                <div class="present-product">
+                    <div class="photo">
+                        <img src="images/nophoto.jpg" alt="Немає фото товару">
+                    </div>
+                    <p class="description">
+                        <a href="#">Найхаразматичнійший чайник, який обов'язково потрібно придбати!</a>
+                    </p>
+                    <div class="price">
+                        1 900 грн.
+                    </div>
+                    <div class="cart">
+                        <a href="#">
+                            <img src="images/icon_buy.svg">
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div> 
     </div>
-    <div class="footer">
-    </div>
+    <footer>
+        <div class="copyright">
+            <p>&#169; 2012-2013 ЗАО "Компанія"</p>
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li>Головна</li>
+                <li>Каталог</li>
+                <li>Доставка та оплата</li>
+                <li>Прайс-лист</li>
+                <li>Контакти</li>
+            </ul>
+        </div>
+        <div class="site-developer">
+            <div class="logo-dev">
+                <img src="" alt="Логотип компанії розробника">
+            </div>
+            <a href="#">Розробка сайту -</a><br>
+            <p>компанія "Піксель Плюс"</p>
+        </div>
+    </footer>
 </body>
 </html>

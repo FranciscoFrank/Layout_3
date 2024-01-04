@@ -1,3 +1,7 @@
+/*  Main  */
+/*  Main  */
+/*  Main  */
+
 :root {
     --first-color: #dcdcdc;
     --second-color: #767676;
@@ -24,6 +28,11 @@ header {
     width: 100%;
     height: 100%;
 }
+
+
+/*  Company logo and name  */ 
+/*  Company logo and name  */ 
+/*  Company logo and name  */ 
 
 .logo-name {
     background-color: var(--first-color);
@@ -55,6 +64,7 @@ header {
     margin-top: -3%;
 }
 
+/*  Contact block  */
 .contact-info {
     color: var(--second-color);
     margin-right: 10%;
@@ -86,40 +96,52 @@ header {
     text-decoration: underline dashed;
 }
 
+
+/*  Menu  */
+/*  Menu  */
+/*  Menu  */
+
+/*  Main  */
 .menu {
     background-color: var(--second-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
 }
 
+/*  Menu  */
 .main-menu {
     color: var(--third-color);
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 
 .main-menu li {
+    list-style: none;
     display: inline-block;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .main-menu a {
     color: var(--third-color);
     text-align: center;
     text-decoration: none;
-    vertical-align: middle;
 }
 
 .main-menu a:hover {
     text-decoration: underline;
 }
 
+.divider {
+    font-size: 35px;
+}
+
+/*  Burger icon  */
 .burger-line {
     position: relative;
     background-color: var(--third-color);
@@ -129,6 +151,7 @@ header {
     transition: all 0.3s ease;
 }
 
+/*  Burger menu  */
 .burger-menu {
     z-index: 2; 
     width: 100%;
@@ -171,6 +194,7 @@ header {
     display: block;
 }
 
+/*  Burger icon (close)  */
 .burger-icon-close {
     z-index: 3;
     display: block;
@@ -195,6 +219,11 @@ header {
     transform: translateY(3.5px) rotate(45deg);
 }
 
+
+/*  Slider  */
+/*  Slider  */
+/*  Slider  */
+
 .slider {
     width: 100%;
     margin: 0 auto;
@@ -211,7 +240,6 @@ header {
     width: 100%;
     height: auto;
     object-fit: cover; 
-    max-width: 100vw;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -237,32 +265,56 @@ header {
     right: 10%;
 }
 
-.content a {
-    text-decoration: none;
+
+/*  Content  */
+/*  Content  */
+/*  Content  */
+
+/*  Main  */
+.content {
+    height: 980px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+    margin-left: 155px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.breadcrumbs a {
     color: var(--second-color);
+    padding: 5px;
+    text-decoration: none;
 }
 
-.content .left-content {
+.breadcrumbs a:hover  {
+    text-decoration: underline;
+}
+
+/*  Left block  */
+.left-content {
+    float: left;
+    padding-top: 1%;
+    padding-left: 160px;
     height: 100%;
-    width: 30%;
-    background-color: var(--third-color);
+    width: 410px;
 }
 
-.content .center-content {
-    height: 100%;
-    width: 70%;
-}
-
-.navigation-goods {
-    width: 200px;
-    background-color: #f0f0f0;
-    padding: 10px;
+.navigation-goods ul {
+    font-size: 18px;
 }
 
 .categories {
     list-style: none;
-    padding: 0;
     margin: 0;
+}
+
+.categories ul {
+    font-size: 14px;
 }
 
 .categories a {
@@ -280,14 +332,24 @@ header {
 }
 
 .subcategories {
-    padding: 0;
-    margin: 0;
     white-space: nowrap;
     display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;    
-    transition: transform 0.5s; 
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.category-item:hover .subcategories {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.subcategories li {
+    list-style-type: disc;
+    list-style-position: inside;
+    white-space: normal;
+    padding-left: 15px;
 }
 
 .subcategories a {
@@ -303,13 +365,139 @@ header {
 .category-item:hover .subcategories {
     display: block;
 }
-  
-.subcategory-item {
-    padding: 8px;
+
+/*  Price list  */
+.price-list {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 15%;
+    font-weight: bold;
 }
 
+.image-price-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-price-list img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*  Center content  */
+.center-content {
+    padding-top: 1%;
+    height: 100%;
+    width: 990px;
+    float: right;
+}
+
+.present-product {
+    background-color: var(--first-color);
+    padding-top: 1%;
+    width: fit-content;
+    display: flex;
+}
+
+.description {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.photo img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    max-width: 200px;
+}
+
+.present-product a {
+    color: var(--second-color);
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.price {
+    text-align: left;
+}
+
+.cart {
+    align-self: flex-end;
+}
+
+.cart img {
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding-top: 20px;
+    padding-right: 25px;
+}*/
+
+.center-content {
+    padding-top: 1%;
+    height: 100%;
+    width: 990px;
+    float: right;
+}
+
+.present-product {
+    background-color: var(--first-color);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+}
+
+.photo img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    max-width: 200px;
+}
+
+.description {
+    width: calc(100% - 20px);
+    word-wrap: break-word;
+}
+
+.present-product a {
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+.price {
+    padding-left: 20px;
+}
+
+.cart {
+    align-self: flex-end;
+}
+
+.cart img {
+    float: right;
+    padding-top: 20px;
+    padding-right: 25px;
+}
+
+/*  Footer  */
+/*  Footer  */
+/*  Footer  */
+
+footer {
+    display: none;
+}
+
+
+/*  Adaptive  */
+/*  Adaptive  */
+/*  Adaptive  */
+
 @media only all {
-    /*If the screen width is the more than 2000 pixels*/
+    /*  If the screen width is the more than 2000 pixels  */
     @media only all and (min-width: 2000px) {
         .logo-name {
             margin-left: 10%;
@@ -341,7 +529,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 1800 - 2000 pixels*/
+    /*  If the screen width is in the range 1800 - 2000 pixels  */
     @media only all and (max-width: 2000px) {
         .logo-name {
             margin-left: 10%;
@@ -373,7 +561,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 1600 - 1800 pixels*/
+    /*  If the screen width is in the range 1600 - 1800 pixels  */
     @media only all and (max-width: 1800px){
         .logo-name {
             margin-left: 10%;
@@ -405,7 +593,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 1400 - 1600 pixels*/
+    /*  If the screen width is in the range 1400 - 1600 pixels  */
     @media only all and (max-width: 1600px) {
         .logo-name {
             margin-left: 10%;
@@ -437,7 +625,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 1200 - 1400 pixels*/
+    /*  If the screen width is in the range 1200 - 1400 pixels  */
     @media only all and (max-width: 1400px) {
         .logo-name {
             margin-left: 10%;
@@ -469,7 +657,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 815 - 1200 pixels*/
+    /*  If the screen width is in the range 815 - 1200 pixels  */
     @media only all and (max-width: 1200px) {
         .logo-name {
             margin-left: 10%;
@@ -501,7 +689,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 650 - 815 pixels*/
+    /*  If the screen width is in the range 650 - 815 pixels  */
     @media only all and (max-width: 815px) {
         .logo-name {
             margin-left: 10%;
@@ -537,7 +725,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 550 - 650 pixels*/
+    /*  If the screen width is in the range 550 - 650 pixels  */
     @media only all and (max-width: 650px) {
         .logo-name {
             margin-left: 10%;
@@ -574,7 +762,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 490 - 550 pixels*/
+    /*  If the screen width is in the range 490 - 550 pixels  */
     @media only all and (max-width: 550px) {
         .logo img {
             height: 70px;
@@ -594,7 +782,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 400 - 490 pixels*/ 
+    /*  If the screen width is in the range 400 - 490 pixels  */ 
     @media only all and (max-width: 490px) {
         .logo img {
             height: 55px;
@@ -623,7 +811,7 @@ header {
         }
     }
 
-    /*If the screen width is in the range 260 - 400 pixels*/
+    /*  If the screen width is in the range 260 - 400 pixels  */
     @media only all and (max-width: 400px) {
         .logo img {
             height: 40px;
@@ -651,40 +839,7 @@ header {
         .feedback a {
             font-size: 6px;
         }
-    }
 
-    /*If the screen width is  pixels*/
-    @media only all and (max-width: 260px) {
-        .logo img {
-            height: 30px;
-            width: 30px;
-        }
-
-        .name-company {
-            font-size: 7px;
-        }
-
-        .slogan {
-            font-size: 5px;
-        }
-
-        .contact-info {
-            top: 5px;
-            margin-left: 65%;
-        }
-
-        .phone-numbers {
-            font-size: 7px;
-            margin-bottom: -20%;
-        }
-
-        .feedback a {
-            font-size: 5px;
-        }
-    }
-
-    /*Edits for the burger icon and burger menu*/
-    @media only all and (max-width: 400px) {
         .burger-icon .burger-line {
             inline-size: 15px;
         }
@@ -721,7 +876,37 @@ header {
         }
     }
 
-    /*Edits for the slider*/
+    /*  If the screen width is  pixels  */
+    @media only all and (max-width: 260px) {
+        .logo img {
+            height: 30px;
+            width: 30px;
+        }
+
+        .name-company {
+            font-size: 7px;
+        }
+
+        .slogan {
+            font-size: 5px;
+        }
+
+        .contact-info {
+            top: 5px;
+            margin-left: 65%;
+        }
+
+        .phone-numbers {
+            font-size: 7px;
+            margin-bottom: -20%;
+        }
+
+        .feedback a {
+            font-size: 5px;
+        }
+    }
+
+    /*  Edits for the slider  */
     @media only all {
         @media only all and (min-width: 2000px) {
             .slick-prev img,
