@@ -36,3 +36,34 @@ document.addEventListener('DOMContentLoaded', function () {
         nextArrow: '<button type="button" class="slick-next"><img src="images/right.jpg" alt="Next"></button>',
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var showFeedbackLink = document.getElementById('show-feedback');
+    var feedbackForm = document.getElementById('feedback-form');
+    var overlay = document.getElementById('overlay');
+    var closeIcon = document.querySelector('#feedback-form img');
+
+    showFeedbackLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        feedbackForm.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    closeIcon.addEventListener('click', function() {
+        feedbackForm.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var filterButton = document.querySelector('.navigation-goods::before');
+    var categoriesMenu = document.querySelector('.categories');
+
+    if (filterButton && categoriesMenu) {
+        filterButton.addEventListener('click', function () {
+            categoriesMenu.classList.toggle('menu-open');
+        });
+    } else {
+        console.error('Не вдалося знайти елементи DOM.');
+    }
+});

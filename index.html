@@ -33,7 +33,7 @@
                 <p>+38(012) 345-67-89<br>
                 +38(012) 345-67-89</p>
             </div>
-            <div class="feedback">
+            <div class="feedback" id="show-feedback">
                 <a href="#">Зворотній зв'язок</a>
             </div>
         </div>
@@ -236,7 +236,7 @@
                 <a href="#">6</a>
                 <a href="#">7</a>
 			</div>
-            <hr class="Divider-text">
+            <hr>
             <div class="useful-info">
                 <div class="left-info">
                     <p>
@@ -252,25 +252,46 @@
         </div> 
     </div>
     <footer>
-        <div class="copyright">
-            <p>&#169; 2012-2013 ЗАО "Компанія"</p>
-        </div>
-        <div class="footer-menu">
-            <ul>
-                <li>Головна</li>
-                <li>Каталог</li>
-                <li>Доставка та оплата</li>
-                <li>Прайс-лист</li>
-                <li>Контакти</li>
-            </ul>
-        </div>
-        <div class="site-developer">
-            <div class="logo-dev">
-                <img src="" alt="Логотип компанії розробника">
+        <div class="footer-content">
+            <div class="copyright">
+                <p>&#169; 2012-2013 ЗАО "Компанія"</p>
+                <p>info@name.com</p>
             </div>
-            <a href="#">Розробка сайту -</a><br>
-            <p>компанія "Піксель Плюс"</p>
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#">Головна</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Доставка та оплата</a></li>
+                    <li><a href="#">Прайс-лист</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </div>
+            <div class="site-developer">
+                <div class="logo-dev">
+                    <img src="images/logo_companydev.svg" alt="Логотип компанії розробника">
+                </div>
+                <div class="name-dev">
+                    <p><a href="#">Розробка сайту</a> -</p>
+                    <p>компанія "Піксель Плюс"</p>
+                </div>
+            </div>
         </div>
     </footer>
+    <div class="feedback-form" id="feedback-form">
+        <img src="images/icon_close.svg" alt="Зображення хрестика">
+        <form method="GET">
+            <h1>Зворотній зв'язок</h1>
+            <label class="form-label">Ваше ім'я*</label><br>
+            <input type="text" name="login" id="login" class="form-input"><br>
+            <label class="form-label">Телефон*</label><br>
+            <input type="text" name="phone" id="phone" class="form-input"><br>
+            <label class="form-label">Email*</label><br>
+            <input type="text" name="email" id="email" class="form-input" required><br>
+            <label class="form-label">Повідомлення</label><br>
+            <textarea name="message" id="message" class="form-input"></textarea><br>
+            <button class="submit formEntry" type="submit">Відправити</button>
+        </form>
+    </div>    
+    <div class="overlay" id="overlay"></div>
 </body>
 </html>
