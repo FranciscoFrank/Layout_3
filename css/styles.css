@@ -313,6 +313,7 @@ header {
 .categories {
     list-style: none;
     margin: 0;
+    transition: transform 0.5s;
 }
 
 .categories ul {
@@ -363,6 +364,82 @@ header {
     display: block;
 }
 
+.menu-toggle {
+    display: none;
+    background-color: var(--second-color);
+    color: var(--third-color);
+    font-size: 24px;
+    padding: 10px;
+    border-color: var(--second-color);
+    border-radius: 5px;
+}
+
+.close-button {
+    position: absolute;
+    top: 3%;
+    transform: translate(-45%, -50%);
+    padding: 0;
+    font-size: 40px;
+    color: var(--third-color);
+    transition: transform 0.5s;
+    z-index: 7;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+  .adaptive-menu.active .close-button {
+    left: 110%;
+}
+
+.adaptive-menu {
+    list-style: none;
+    margin: 0;
+    transition: transform 0.5s;
+    transform: translateX(-100%); /* Початкова позиція за межами екрану */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    background-color: var(--third-color);
+    padding: 10px;
+    z-index: 6;
+    height: 100%;
+    overflow: visible;
+}
+
+.adaptive-menu nav {
+    display: block;
+}
+
+.adaptive-menu nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.adaptive-menu nav ul li {
+    margin: 10px 0;
+}
+
+.adaptive-menu .categories li {
+    font-size: 24px;
+}
+
+.adaptive-menu .subcategories li {
+    font-size: 18px;
+}
+
+.menu-overlay {
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
 /*  Price list  */
 .price-list {
     text-align: center;
@@ -384,21 +461,29 @@ header {
 
 /*  Center content  */
 .center-content {
+    padding-left: 1%;
     padding-right: 15%;
     float: right;
     padding-top: 1%;
     width: 70%;
-    padding-left: 1%;
 }
 
 /*  Product cards */
 .gallery {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
     background-color: var(--first-color);
     width: fit-content;
     margin-bottom: 20px;
@@ -456,6 +541,11 @@ header {
 	font-size: 14px;
 	text-decoration: none;
 	margin-right: 20px;
+}
+
+.pagination a:nth-child(3) {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* Divider */
@@ -538,6 +628,7 @@ footer {
 }
 
 
+
 /*  Feedback form  */
 /*  Feedback form  */
 /*  Feedback form  */
@@ -571,7 +662,6 @@ textarea.form-input {
     padding: 5px;
 }
 
-
 .feedback-form h1 {
     margin-bottom: 25px;
 }
@@ -586,7 +676,7 @@ textarea.form-input {
     width: 340px;
 }
 
-#feedback-form img {
+.feedback-form img {
     height: 25px;
     position: absolute;
     top: 0;
@@ -608,14 +698,11 @@ textarea.form-input {
 .overlay {
     z-index: 4;
     position: fixed;
-    background-color: #000;
-    opacity: 0.5;
-    -moz-opacity: 0.8;
-    filter: alpha(opacity=80);
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
 }
 
@@ -821,8 +908,14 @@ textarea.form-input {
             padding-left: 10%;
         }
 
-        .footer-content {
-            display: block;
+        .useful-info {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    
+        .right-info {
+            margin-left: 0;
+            margin-top: 5%; /* або інше значення за вашим бажанням */
         }
     }
 
@@ -864,6 +957,39 @@ textarea.form-input {
         .left-content, .breadcrumbs {
             padding-left: 5%;
         }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .adaptive-menu.active {
+            transform: translateX(0); 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+        }
+
+        .adaptive-menu .categories li {
+            font-size: 24px;
+        }
+        
+        .adaptive-menu .subcategories li {
+            font-size: 18px;
+        }
+        
+        .navigation-goods {
+            display: none;
+        }
+
+        .menu-toggle {
+            margin-bottom: 10%;
+            border: none;
+            display: block;
+        }
     }
 
     /*  If the screen width is in the range 550 - 650 pixels  */
@@ -901,6 +1027,15 @@ textarea.form-input {
         .burger-line {
             display: block;
         }
+
+        .price-list img {
+            height: 95px;
+            width: auto;
+        }
+
+        .price-list p {
+            font-size: 25px;
+        }
     }
 
     /*  If the screen width is in the range 490 - 550 pixels  */
@@ -920,6 +1055,15 @@ textarea.form-input {
 
         .phone-numbers {
             font-size: 15px;
+        }
+
+        .price-list img {
+            height: 75px;
+            width: auto;
+        }
+
+        .price-list p {
+            font-size: 20px;
         }
     }
 
@@ -950,6 +1094,18 @@ textarea.form-input {
         .menu {
             padding: 10px;
         }
+
+        .menu-toggle {
+            font-size: 20px;
+        }
+
+        .adaptive-menu .categories li {
+            font-size: 20px;
+        }
+        
+        .adaptive-menu .subcategories li {
+            font-size: 16px;
+        }
     }
 
     /*  If the screen width is in the range 260 - 400 pixels  */
@@ -969,7 +1125,7 @@ textarea.form-input {
 
         .contact-info {
             top: 7px;
-            margin-left: 67%;
+            margin-left: 65%;
         }
 
         .phone-numbers {
@@ -986,7 +1142,6 @@ textarea.form-input {
         }
 
         .menu {
-
             padding: 5px;
         }
 
@@ -1014,6 +1169,23 @@ textarea.form-input {
 
         .burger-icon-close .burger-line:nth-child(2) {
             transform: translateY(-3.5px) rotate(-45deg);
+        }
+
+        .adaptive-menu .categories li {
+            font-size: 18px;
+        }
+        
+        .adaptive-menu .subcategories li {
+            font-size: 14px;
+        }
+
+        .price-list img {
+            height: 55px;
+            width: auto;
+        }
+
+        .price-list p {
+            font-size: 15px;
         }
     }
 
@@ -1044,57 +1216,6 @@ textarea.form-input {
 
         .feedback a {
             font-size: 5px;
-        }
-    }
-
-    /* Edits pagination  */
-    @media only all {
-        @media only all and (max-width: 950px) {
-            .categories {
-                display: none;
-            }
-
-            .navigation-goods::before {
-                content: "Фільтри";
-                display: block;
-                text-align: center;
-                font-weight: bold;
-                margin-bottom: 10px;
-                cursor: pointer; /* Додаємо курсор-вказівник для покращення взаємодії користувача */
-            }
-
-            .menu-open .categories {
-                display: block; /* Показуємо список категорій, коли маємо клас .menu-open */
-            }
-
-            /* Анімація для виїжджаючого меню */
-            .categories {
-                transition: transform 0.3s ease-in-out;
-                transform: translateX(-100%);
-            }
-
-            .menu-open .categories {
-                transform: translateX(0); /* Зсуваємо список назад, коли маємо клас .menu-open */
-            }
-
-            .price-list {
-                display: none;
-            }
-            
-            hr {
-                display: none;
-            }
-
-            .useful-info {
-                display: none;
-            }
-        }
-
-        @media only all and (max-width: ) {
-            .pagination a:first-child,
-            .pagination a:last-child {
-                display: none;
-            }
         }
     }
 

@@ -55,15 +55,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var filterButton = document.querySelector('.navigation-goods::before');
-    var categoriesMenu = document.querySelector('.categories');
+document.addEventListener('DOMContentLoaded', function() {
+    var overlay = document.querySelector('.menu-overlay'); // Додайте цей рядок
 
-    if (filterButton && categoriesMenu) {
-        filterButton.addEventListener('click', function () {
-            categoriesMenu.classList.toggle('menu-open');
-        });
-    } else {
-        console.error('Не вдалося знайти елементи DOM.');
-    }
+    document.getElementById('toggleButton').addEventListener('click', function() {
+        document.getElementById('menu').classList.toggle('active');
+        overlay.style.display = 'block'; // Використовуйте overlay замість this
+    });
+
+    overlay.addEventListener('click', function() {
+        document.getElementById('menu').classList.remove('active');
+        overlay.style.display = 'none';
+    });
+
+    document.querySelector('.close-button').addEventListener('click', function() {
+        document.getElementById('menu').classList.remove('active');
+        overlay.style.display = 'none';
+    });
 });
+
+  
+
+  
