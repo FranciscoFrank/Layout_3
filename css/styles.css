@@ -649,7 +649,7 @@ footer {
     position: fixed;
     align-items: center;
     text-align: center;
-    top: 30%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--third-color);
@@ -702,21 +702,6 @@ textarea.form-input {
     font-weight: bold;
     border: none;
     box-shadow: none;
-}
-
-.form-input:required:invalid:focus {
-    border: 1px solid red;
-}
-
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-    display: none;
-}
-
-.form-input:required:invalid:focus + .error-message {
-    display: block;
 }
 
 .overlay {
@@ -1300,13 +1285,9 @@ textarea.form-input {
             width: 20px;
         }
 
-        .feedback-form {
-            top: 25%;
-        }
-
         .feedback-form input {
             height: 25px;
-            width: 240px;
+            width: 260px;
         }
 
         .feedback-form textarea {
@@ -1320,14 +1301,14 @@ textarea.form-input {
         }
     }
 
+    /*  dgdg  */
     @media only all and (max-width: 375px) {
-
         .feedback-form {
-            top: 20%;
+            top: 40%;
         }
 
         .feedback-form input {
-            height: 20px;
+            height: 30px;
             width: 220px;
         }
 
@@ -1335,40 +1316,18 @@ textarea.form-input {
             height: 60px;
             width: 220px;
         }
-        
-        .feedback-form h1 {
-            margin-bottom: 25px;
-            font-size: 18px;
-        }
     }
 
     /*  If the screen width is less than 260 pixels  */
-    @media only all and (max-width: 260px) {
-        .logo img {
+    @media only all and (max-width: 320px) {
+        .feedback-form input {
             height: 30px;
-            width: 30px;
+            width: 200px;
         }
 
-        .name-company {
-            font-size: 7px;
-        }
-
-        .slogan {
-            font-size: 5px;
-        }
-
-        .contact-info {
-            top: 5px;
-            margin-left: 65%;
-        }
-
-        .phone-numbers {
-            font-size: 7px;
-            margin-bottom: -20%;
-        }
-
-        .feedback a {
-            font-size: 5px;
+        .feedback-form textarea {
+            height: 60px;
+            width: 200px;
         }
     }
 
