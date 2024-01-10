@@ -18,22 +18,25 @@ body {
     background-color: var(--third-color);
     padding: 0;
     margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     font-family: 'PT Sans', sans-serif;
     font-size: 14px;
     color: var(--second-color);
 }
+
+
+
+/*  Company logo and name  */ 
+/*  Company logo and name  */ 
+/*  Company logo and name  */ 
 
 header {
     background-color: var(--first-color);
     width: 100%;
     height: 100%;
 }
-
-
-
-/*  Company logo and name  */ 
-/*  Company logo and name  */ 
-/*  Company logo and name  */ 
 
 .logo-name {
     background-color: var(--first-color);
@@ -110,6 +113,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    height: 100%;
     text-align: center;
 }
 
@@ -228,6 +232,7 @@ header {
 /*  Slider  */
 
 .slider {
+    height: 100%;
     width: 100%;
     margin: 0 auto;
 }
@@ -276,6 +281,7 @@ header {
 
 /*  Main  */
 .content {
+    height: 100%;
     overflow: hidden;
     width: 100%;
 }
@@ -530,14 +536,13 @@ header {
 	clear: both;
 	text-align: center;
 	padding-top: 2.5%;
-	padding-bottom: 5%;
 }
 
 .pagination a {
     color: var(--second-color);
 	font-size: 14px;
 	text-decoration: none;
-	margin-right: 20px;
+	margin-right: 10px;
 }
 
 .pagination a:nth-child(3) {
@@ -548,7 +553,7 @@ header {
 /* Divider */
 hr {
     margin-bottom: 2.5%;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 /*  Useful info  */
@@ -574,12 +579,14 @@ hr {
 /*  Footer  */
 
 footer {
+    margin: 0;
+    padding: 0;
     width: 100%;
+    height: 100%;
     background-color: var(--second-color);
 }
 
 .footer-content {
-    box-sizing: border-box;
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 3.5%;
@@ -587,6 +594,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-content a {
@@ -598,8 +606,12 @@ footer {
     color: var(--third-color);
 }
 
+.copyright {
+    padding-right: 10%;
+}
+
 .footer-menu {
-    margin-left: -20%;
+    padding-right: 10%;
 }
 
 .footer-menu li {
@@ -614,7 +626,7 @@ footer {
 }
 
 .logo-dev {
-    margin-top: 2px;
+    margin-top: 4px;
     margin-right: 10px;
 }
 
@@ -631,8 +643,8 @@ footer {
 /*  Feedback form  */
 
 .feedback-form {
-    width: 460px;
-    height: 620px;
+    width: fit-content;
+    height: fit-content;
     display: none;
     overflow: visible;
     position: absolute;
@@ -1005,7 +1017,7 @@ textarea.form-input {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
+        }  
     }
 
     /*  If the screen width is in the range 550 - 650 pixels  */
@@ -1081,6 +1093,28 @@ textarea.form-input {
         .price-list p {
             font-size: 20px;
         }
+        
+        .pagination {
+            padding-bottom: 10%;
+        }
+
+        .pagination a {
+            margin-right: 5px;
+        }
+
+        hr, .useful-info {
+            margin-left: -40%;
+        }
+    }
+
+    @media only all and (max-width: 530px) {
+        .copyright {
+            padding-bottom: 5%;
+        }
+
+        .footer-menu {
+            padding-bottom: 5%;
+        }
     }
 
     /*  If the screen width is in the range 400 - 490 pixels  */ 
@@ -1121,20 +1155,6 @@ textarea.form-input {
         
         .adaptive-menu .subcategories li {
             font-size: 16px;
-        }
-
-        .card .price {
-            font-size: 20px;
-        }
-
-        .card .basket {
-            height: 15px;
-        }
-    }
-
-    @media only all and (max-width: 410px) {
-        .pagination a:nth-child(7), a:nth-child(6) {
-            display: none;
         }
     }
 
@@ -1209,6 +1229,15 @@ textarea.form-input {
             font-size: 14px;
         }
 
+        .menu-toggle {
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        .close-button {
+            font-size: 20px;
+        }
+
         .price-list img {
             height: 55px;
             width: auto;
@@ -1220,6 +1249,11 @@ textarea.form-input {
 
         .card {
             width: 165px;
+        }
+
+        .basket img {
+            height: 20px;
+            width: 20px;
         }
     }
 
