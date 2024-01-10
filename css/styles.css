@@ -646,16 +646,15 @@ footer {
     width: fit-content;
     height: fit-content;
     display: none;
-    overflow: visible;
-    position: absolute;
+    position: fixed;
     align-items: center;
     text-align: center;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--third-color);
     padding: 20px;
-    z-index: 5;
+    z-index: 7;
 }
 
 .feedback-form textarea {
@@ -668,11 +667,12 @@ footer {
 .form-input,
 textarea.form-input {
     border: 1px solid var(--second-color); 
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 .feedback-form h1 {
     margin-bottom: 25px;
+    font-size: 22px;
 }
 
 .form-label, .form-input {
@@ -704,11 +704,27 @@ textarea.form-input {
     box-shadow: none;
 }
 
+.form-input:required:invalid:focus {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.form-input:required:invalid:focus + .error-message {
+    display: block;
+}
+
 .overlay {
     z-index: 4;
     position: fixed;
     top: 0;
     left: 0;
+    transition: opacity 0.5s;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -928,6 +944,7 @@ textarea.form-input {
         }
     }
 
+    /*  Edits for the for the product cards  */
     @media only all and (max-width: 920px) {
         .card {
             width: 170px;
@@ -1009,8 +1026,19 @@ textarea.form-input {
             border: none;
             display: block;
         }
+
+        .feedback-form input {
+            height: 30px;
+            width: 300px;
+        }
+
+        .feedback-form textarea {
+            height: 120px;
+            width: 300px;
+        }        
     }
 
+    /*  Edits for the gallery  */
     @media only all and (max-width: 690px) {
         .gallery {
             display: flex;
@@ -1107,6 +1135,7 @@ textarea.form-input {
         }
     }
 
+    /*  Edits for the footer  */
     @media only all and (max-width: 530px) {
         .copyright {
             padding-bottom: 5%;
@@ -1129,16 +1158,16 @@ textarea.form-input {
         }
 
         .slogan {
-            font-size: 9px;
+            font-size: 10px;
         }
 
         .phone-numbers {
-            font-size: 12px;
+            font-size: 14px;
             margin-bottom: -6%;
         }
 
         .feedback a {
-            font-size: 8px;
+            font-size: 10px;
         }
 
         .menu {
@@ -1155,6 +1184,21 @@ textarea.form-input {
         
         .adaptive-menu .subcategories li {
             font-size: 16px;
+        }
+
+        .feedback-form input {
+            height: 30px;
+            width: 260px;
+        }
+
+        .feedback-form textarea {
+            height: 140px;
+            width: 260px;
+        }
+        
+        .feedback-form h1 {
+            margin-bottom: 25px;
+            font-size: 22px;
         }
     }
 
@@ -1255,9 +1299,50 @@ textarea.form-input {
             height: 20px;
             width: 20px;
         }
+
+        .feedback-form {
+            top: 25%;
+        }
+
+        .feedback-form input {
+            height: 25px;
+            width: 240px;
+        }
+
+        .feedback-form textarea {
+            height: 100px;
+            width: 260px;
+        }
+        
+        .feedback-form h1 {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
     }
 
-    /*  If the screen width is  pixels  */
+    @media only all and (max-width: 375px) {
+
+        .feedback-form {
+            top: 20%;
+        }
+
+        .feedback-form input {
+            height: 20px;
+            width: 220px;
+        }
+
+        .feedback-form textarea {
+            height: 60px;
+            width: 220px;
+        }
+        
+        .feedback-form h1 {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+    }
+
+    /*  If the screen width is less than 260 pixels  */
     @media only all and (max-width: 260px) {
         .logo img {
             height: 30px;

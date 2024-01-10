@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Додайте обробник кліку для блока burgerIconClose
     const burgerIconClose = document.querySelector('.burger-icon-close');
     burgerIconClose.addEventListener('click', function () {
         burgerMenu.classList.remove('active');
@@ -38,6 +37,25 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    var overlay = document.querySelector('.menu-overlay');
+
+    document.getElementById('toggleButton').addEventListener('click', function() {
+        document.getElementById('menu').classList.toggle('active');
+        overlay.style.display = 'block';
+    });
+
+    overlay.addEventListener('click', function() {
+        document.getElementById('menu').classList.remove('active');
+        overlay.style.display = 'none';
+    });
+
+    document.querySelector('.close-button').addEventListener('click', function() {
+        document.getElementById('menu').classList.remove('active');
+        overlay.style.display = 'none';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     var showFeedbackLink = document.getElementById('show-feedback');
     var feedbackForm = document.getElementById('feedback-form');
     var overlay = document.getElementById('overlay');
@@ -54,26 +72,3 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.style.display = 'none';
     });
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    var overlay = document.querySelector('.menu-overlay'); // Додайте цей рядок
-
-    document.getElementById('toggleButton').addEventListener('click', function() {
-        document.getElementById('menu').classList.toggle('active');
-        overlay.style.display = 'block'; // Використовуйте overlay замість this
-    });
-
-    overlay.addEventListener('click', function() {
-        document.getElementById('menu').classList.remove('active');
-        overlay.style.display = 'none';
-    });
-
-    document.querySelector('.close-button').addEventListener('click', function() {
-        document.getElementById('menu').classList.remove('active');
-        overlay.style.display = 'none';
-    });
-});
-
-  
-
-  
