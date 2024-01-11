@@ -26,15 +26,20 @@ body {
     color: var(--second-color);
 }
 
+
+/*  Container  */
+/*  Container  */
+/*  Container  */
+
 .container {
     flex-grow: 1;
 }
 
 
 
-/*  Company logo and name  */ 
-/*  Company logo and name  */ 
-/*  Company logo and name  */ 
+/*  Header  */ 
+/*  Header  */ 
+/*  Header  */ 
 
 header {
     background-color: var(--first-color);
@@ -42,6 +47,7 @@ header {
     height: 100%;
 }
 
+/*  Company logo and name  */
 .logo-name {
     background-color: var(--first-color);
     display: flex;
@@ -110,7 +116,6 @@ header {
 /*  Menu  */
 /*  Menu  */
 
-/*  Main  */
 .menu {
     background-color: var(--second-color);
     display: flex;
@@ -283,7 +288,6 @@ header {
 /*  Content  */
 /*  Content  */
 
-/*  Main  */
 .content {
     height: 100%;
     overflow: hidden;
@@ -316,6 +320,7 @@ header {
     height: 100%;
 }
 
+/*  Main menu  */
 .navigation-goods ul {
     font-size: 18px;
 }
@@ -374,6 +379,7 @@ header {
     display: block;
 }
 
+/*  Adaptive menu  */
 .menu-toggle {
     display: none;
     background-color: var(--second-color);
@@ -406,7 +412,7 @@ header {
     list-style: none;
     margin: 0;
     transition: transform 0.5s;
-    transform: translateX(-100%); /* Початкова позиція за межами екрану */
+    transform: translateX(-100%);
     position: fixed;
     top: 0;
     left: 0;
@@ -717,6 +723,10 @@ textarea.form-input {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.submit:active {
     display: none;
 }
 
@@ -1172,7 +1182,7 @@ textarea.form-input {
         }
         
         .adaptive-menu .subcategories li {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .feedback-form input {
@@ -1305,7 +1315,7 @@ textarea.form-input {
         }
     }
 
-    /*  dgdg  */
+    /*  Edits for the feedback form and adaptive menu  */
     @media only all and (max-width: 375px) {
         .feedback-form {
             top: 40%;
@@ -1320,6 +1330,14 @@ textarea.form-input {
             height: 60px;
             width: 220px;
         }
+
+        .adaptive-menu .categories li {
+            font-size: 14px;
+        }
+        
+        .adaptive-menu .subcategories li {
+            font-size: 12px;
+        }
     }
 
     /*  If the screen width is less than 260 pixels  */
@@ -1332,6 +1350,14 @@ textarea.form-input {
         .feedback-form textarea {
             height: 60px;
             width: 200px;
+        }
+
+        .adaptive-menu .categories li {
+            font-size: 14px;
+        }
+        
+        .adaptive-menu .subcategories li {
+            font-size: 10px;
         }
     }
 

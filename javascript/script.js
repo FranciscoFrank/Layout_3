@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var showFeedbackLink = document.getElementById('show-feedback');
     var feedbackForm = document.getElementById('feedback-form');
     var overlay = document.getElementById('overlay');
-    var closeIcon = document.querySelector('#feedback-form img');
+    var closeIcon = document.querySelector('#close-feedback');
+
 
     showFeedbackLink.addEventListener('click', function(event) {
         event.preventDefault();
