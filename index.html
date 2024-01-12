@@ -308,21 +308,32 @@
         </div>
     </footer>
     <div class="feedback-form" id="feedback-form">
-        <img src="images/icon_close.svg" alt="Зображення хрестика" id="close-feedback">
-        <form method="GET" class="first-form">
+        <img src="images/icon_close.svg" alt="Закрити" id="close-feedback-close">
+        <form method="POST" class="first-form">
             <h1>Зворотній зв'язок</h1>
-            <label class="form-label">Ваше ім'я*</label><br>
-            <input type="text" name="login" id="login" class="form-input" placeholder="Обов'язкове до заповнення" autocomplete="off" required><br>
+            <div class="tooltip">
+                <label class="form-label">Ваше ім'я*</label><br>
+                <input type="text" name="login" id="login" class="form-input" placeholder="Обов'язкове до заповнення" autocomplete="off" required><br>
+            </div>
 
-            <label class="form-label">Телефон*</label><br>
-            <input type="text" name="phone" id="phone" class="form-input" placeholder="Обов'язкове до заповнення" autocomplete="off" required><br>
+            <div class="tooltip">
+                <label class="form-label">Телефон*</label><br>
+                <input type="tel" name="phone" id="phone" class="form-input" pattern="[+][ ][0-9]{12}" placeholder="Обов'язкове до заповнення" autocomplete="off" required><br>
+                <div class="tooltiptext">Номер телефону повинен бути у форматі: <br> +380 12 345 67 89</div>
+            </div>
 
-            <label class="form-label">Email*</label><br>
-            <input type="text" name="email" id="email" class="form-input" placeholder="Обов'язкове до заповнення" autocomplete="off" required><br>
+            <div class="tooltip">
+                <label class="form-label">Email*</label><br>
+                <input type="email" name="email" id="email" class="form-input" placeholder="Обов'язкове до заповнення" autocomplete="off" required><br>
+                <div class="tooltiptext">Електронна адреса повинна бути у форматі: <br> email@gmail.com</div>
+            </div>
 
-            <label class="form-label">Повідомлення</label><br>
-            <textarea name="message" id="message" class="form-input" autocomplete="off" required></textarea><br>
-            
+            <div class="tooltip">
+                <label class="form-label">Повідомлення</label><br>
+                <textarea name="message" id="message" class="form-input" autocomplete="off" required></textarea><br>
+                <div class="tooltiptext">Обов'язкове до заповнення</div>
+            </div>
+
             <button type="submit" id="submit">Відправити</button>
         </form>
     </div>

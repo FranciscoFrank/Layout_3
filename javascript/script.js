@@ -55,25 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var showFeedbackLink = document.getElementById('show-feedback');
-    var feedbackForm = document.getElementById('feedback-form');
-    var overlay = document.getElementById('overlay');
-    var closeIcon = document.querySelector('#close-feedback');
-
-
-    showFeedbackLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        feedbackForm.style.display = 'block';
-        overlay.style.display = 'block';
-    });
-
-    closeIcon.addEventListener('click', function() {
-        feedbackForm.style.display = 'none';
-        overlay.style.display = 'none';
-    });
-});
-
 document.addEventListener('DOMContentLoaded', function () {
     var submitButton = document.getElementById('submit');
     var inputElements = document.querySelectorAll('.form-input');
@@ -81,9 +62,32 @@ document.addEventListener('DOMContentLoaded', function () {
     submitButton.addEventListener('click', function() {
         inputElements.forEach(function(inputElement) {
             inputElement.classList.add('activated');
+
         });
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var showFeedbackLink = document.getElementById('show-feedback');
+    var feedbackForm = document.getElementById('feedback-form');
+    var overlay = document.getElementById('overlay');
+    var closeIcon = document.querySelector('#close-feedback-close');
 
+    showFeedbackLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        feedbackForm.classList.remove('fadeOut');
+        feedbackForm.classList.add('fadeIn');
+        feedbackForm.style.display = 'block';
+        overlay.style.display = 'block';
+    });
 
+    closeIcon.addEventListener('click', function() {
+        feedbackForm.classList.remove('fadeIn');
+        feedbackForm.classList.add('fadeOut');
+
+        feedbackForm.addEventListener('animationend', function() {
+            feedbackForm.style.display = 'none';
+            overlay.style.display = 'none';
+        }, { once: true });
+    });
+});
