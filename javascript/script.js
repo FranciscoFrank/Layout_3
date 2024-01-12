@@ -73,3 +73,17 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.style.display = 'none';
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var submitButton = document.getElementById('submit');
+    var inputElements = document.querySelectorAll('.form-input');
+
+    submitButton.addEventListener('click', function() {
+        inputElements.forEach(function(inputElement) {
+            inputElement.classList.add('activated');
+        });
+    });
+});
+
+
+
