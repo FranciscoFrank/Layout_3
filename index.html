@@ -31,8 +31,8 @@
             </div>
             <div class="contact-info">
                 <div class="phone-numbers">
-                    <p>+38(012) 345-67-89<br>
-                    +38(012) 345-67-89</p>
+                    <a href="tel:+38(012) 345-67-89">+38(012) 345-67-89</a>
+                    <a href="tel:+38(012) 345-67-89">+38(012) 345-67-89</a>
                 </div>
                 <div class="feedback" id="show-feedback">
                     <a href="#">Зворотній зв'язок</a>
@@ -96,7 +96,14 @@
                 <div class="navigation-goods">
                     <nav>
                         <ul class="categories">
-                            <li class="category-item"><a href="#">Автомобілі</a></li>
+                            <li class="category-item"><a href="#">Автомобілі</a>
+                                <ul class="subcategories">
+                                    <li class="subcategory-item"><a href="#">Легкові автомобілі</a></li>
+                                    <li class="subcategory-item"><a href="#">Вантажівки</a></li>
+                                    <li class="subcategory-item"><a href="#">Причіпи</a></li>
+                                    <li class="subcategory-item"><a href="#">Страхування</a></li>
+                                </ul>
+                            </li>
                             <li class="category-item"><a href="#">Побутова техніка</a>
                                 <ul class="subcategories">
                                     <li class="subcategory-item"><a href="#">Мікрохвильовки</a></li>
@@ -112,9 +119,29 @@
                                     <li class="subcategory-item"><a href="#">Захисні плівки та скло</a></li>
                                 </ul>
                             </li>
-                            <li class="category-item"><a href="#">Комп'ютери</a></li>
-                            <li class="category-item"><a href="#">Одяг</a></li>
-                            <li class="category-item"><a href="#">Нерухомість</a></li>
+                            <li class="category-item"><a href="#">Комп'ютери</a>
+                                <ul class="subcategories">
+                                    <li class="subcategory-item"><a href="#">Процесори</a></li>
+                                    <li class="subcategory-item"><a href="#">Оперативна пам'ять</a></li>
+                                    <li class="subcategory-item"><a href="#">Відеокарти</a></li>
+                                </ul>
+                            </li>
+                            <li class="category-item"><a href="#">Одяг</a>
+                                <ul class="subcategories">
+                                    <li class="subcategory-item"><a href="#">Зимова колеція</a></li>
+                                    <li class="subcategory-item"><a href="#">Осіння колекція</a></li>
+                                    <li class="subcategory-item"><a href="#">Літня колекція</a></li>
+                                    <li class="subcategory-item"><a href="#">Весняна колеція</a></li>
+                                </ul>
+                            </li>
+                            <li class="category-item"><a href="#">Нерухомість</a>
+                                <ul class="subcategories">
+                                    <li class="subcategory-item"><a href="#">Квартири</a></li>
+                                    <li class="subcategory-item"><a href="#">Будинки</a></li>
+                                    <li class="subcategory-item"><a href="#">Таунхауси</a></li>
+                                    <li class="subcategory-item"><a href="#">Земельні ділянки</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -147,10 +174,12 @@
                 <div class="menu-overlay"></div>
                 <button class="menu-toggle" id="toggleButton">Меню</button>
                 <div class="price-list">
-                    <div class="image-price-list">
-                        <img src="images/logo_price-list.jpg" alt="Прайс-лист">
-                    </div>
-                    <p>Прайс-лист</p>
+                    <a href="#">
+                        <div class="image-price-list">
+                            <img src="images/logo_price-list.jpg" alt="Прайс-лист">
+                        </div>
+                        <p>Прайс-лист</p>
+                    </a>
                 </div>
             </div>   
             <div class="center-content">
@@ -285,7 +314,9 @@
         <div class="footer-content">
             <div class="copyright">
                 <p>&#169; 2012-2013 ЗАО "Компанія"</p>
-                <p>info@name.com</p>
+                <a href="#">
+                    info@name.com
+                </a>
             </div>
             <div class="footer-menu">
                 <ul>
@@ -313,13 +344,13 @@
             <h1>Зворотній зв'язок</h1>
             <div class="tooltip">
                 <label class="form-label">Ваше ім'я*</label><br>
-                <input type="text" name="login" id="login" class="form-input" placeholder="Обов'язкове до заповнення" autocomplete="off" required><br>
+                <input type="text" name="login" id="login" class="form-input" placeholder="Обов'язкове до заповнення" pattern="[А-Яа-яІіЇїЄєҐґA-Za-z]+" autocomplete="off" required><br>
             </div>
 
             <div class="tooltip">
                 <label class="form-label">Телефон*</label><br>
-                <input type="tel" name="phone" id="phone" class="form-input" pattern="[+][ ][0-9]{12}" placeholder="Обов'язкове до заповнення" autocomplete="off" required><br>
-                <div class="tooltiptext">Номер телефону повинен бути у форматі: <br> +380 12 345 67 89</div>
+                <input type="tel" name="phone" id="phone" class="form-input" pattern="[+][0-9]{12}" placeholder="Обов'язкове до заповнення" autocomplete="off" required><br>
+                <div class="tooltiptext">Номер телефону повинен бути у форматі: <br> +380123456789</div>
             </div>
 
             <div class="tooltip">
@@ -331,7 +362,6 @@
             <div class="tooltip">
                 <label class="form-label">Повідомлення</label><br>
                 <textarea name="message" id="message" class="form-input" autocomplete="off" required></textarea><br>
-                <div class="tooltiptext">Обов'язкове до заповнення</div>
             </div>
 
             <button type="submit" id="submit">Відправити</button>

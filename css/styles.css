@@ -96,8 +96,13 @@ header {
     padding: 0;
 }
 
-.phone-numbers p {
+.phone-numbers a {
     margin-bottom: 0;
+}
+
+.phone-numbers a {
+    text-decoration: none;
+    color: var(--second-color);
 }
 
 .feedback a {
@@ -241,23 +246,26 @@ header {
 /*  Slider  */
 
 .slider {
-    height: 100%;
     width: 100%;
-    margin: 0 auto;
-}
-
-.slide {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .slide img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
-    object-fit: cover; 
-    transition: opacity 0.5s ease-in-out;
+    margin: 0 auto; /* Додайте цей стиль для вирівнювання по центру */
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
 
 .slick-active {
@@ -475,6 +483,11 @@ header {
     height: auto;
 }
 
+.price-list a {
+    color: var(--second-color);
+    text-decoration: none;
+}
+
 /*  Center content  */
 .center-content {
     padding-left: 1.5%;
@@ -618,6 +631,15 @@ footer {
 
 .copyright {
     padding-right: 10%;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+.copyright a:hover {
+    text-decoration: underline;
 }
 
 .footer-menu {
@@ -822,7 +844,7 @@ textarea.form-input.activated:focus::placeholder {
             font-size: 25px;
         }
 
-        .phone-numbers {
+        .phone-numbers a {
             font-size: 45px;
         }
 
@@ -1293,7 +1315,7 @@ textarea.form-input.activated:focus::placeholder {
         }
 
         .feedback a {
-            font-size: 6px;
+            font-size: 7px;
         }
 
         .burger-icon .burger-line {
