@@ -383,10 +383,6 @@ header {
     font-weight: bold;
 }
 
-.category-item:hover .subcategories {
-    display: block;
-}
-
 /*  Adaptive menu  */
 .menu-toggle {
     display: none;
@@ -853,7 +849,7 @@ textarea.form-input.activated:focus::placeholder {
         }
 
         .main-menu a {
-            font-size: 35px;
+            font-size: 30px;
         }
     }
 
