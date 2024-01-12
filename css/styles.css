@@ -864,12 +864,12 @@ textarea.form-input.activated:focus::placeholder {
         }
         
         .logo-name img {
-            width: 150px;
-            height: 150px;
+            width: 135px;
+            height: 135px;
         }
 
         .name-company {
-            font-size: 35px;
+            font-size: 30px;
         }
 
         .slogan {
@@ -877,15 +877,19 @@ textarea.form-input.activated:focus::placeholder {
         }
 
         .phone-numbers {
-            font-size: 45px;
+            font-size: 40px;
         }
 
         .feedback a {
             font-size: 25px;
         }
 
+        .main-menu {
+            font-size: 20px;
+        }
+
         .main-menu a {
-            font-size: 35px;
+            font-size: 30px;
         }
     }
 
