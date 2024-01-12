@@ -726,10 +726,6 @@ textarea.form-input {
     display: none;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
 textarea:focus, input:focus {
     outline: 0;
 }
