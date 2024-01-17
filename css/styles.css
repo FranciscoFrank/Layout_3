@@ -44,7 +44,7 @@ header {
 /*  Header content  */
 .header-content {
     padding: 10px;
-    width: 1000px;
+    width: 980px;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
@@ -132,7 +132,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1000px;
+    width: 980px;
     padding: 10px;
     margin: 0 auto;
     text-align: center;
@@ -600,7 +600,7 @@ footer {
 
 .footer-content {
     padding: 10px;
-    width: 1000px;
+    width: 980px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
