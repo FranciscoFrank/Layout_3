@@ -1,7 +1,4 @@
 /*  Main  */
-/*  Main  */
-/*  Main  */
-
 :root {
     --first-color: #dcdcdc;
     --second-color: #767676;
@@ -28,9 +25,6 @@ body {
 
 
 /*  Container  */
-/*  Container  */
-/*  Container  */
-
 .container {
     flex-grow: 1;
 }
@@ -38,9 +32,6 @@ body {
 
 
 /*  Header  */ 
-/*  Header  */ 
-/*  Header  */ 
-
 header {
     background-color: var(--first-color);
     width: 100%;
@@ -118,9 +109,6 @@ header {
 
 
 /*  Menu  */
-/*  Menu  */
-/*  Menu  */
-
 .menu {
     background-color: var(--second-color);
     display: flex;
@@ -242,9 +230,6 @@ header {
 
 
 /*  Slider  */
-/*  Slider  */
-/*  Slider  */
-
 .slider {
     width: 100%;
     overflow: hidden;
@@ -258,7 +243,7 @@ header {
     max-height: 100%;
     width: auto;
     height: auto;
-    margin: 0 auto; /* Додайте цей стиль для вирівнювання по центру */
+    margin: 0 auto;
 }
 
 .slide img {
@@ -293,9 +278,6 @@ header {
 
 
 /*  Content  */
-/*  Content  */
-/*  Content  */
-
 .content {
     height: 100%;
     overflow: hidden;
@@ -594,9 +576,6 @@ hr {
 
 
 /*  Footer  */
-/*  Footer  */
-/*  Footer  */
-
 footer {
     margin-top: auto;
     padding: 0;
@@ -667,9 +646,6 @@ footer {
 
 
 /*  Feedback form  */
-/*  Feedback form  */
-/*  Feedback form  */
-
 .feedback-form {
     width: fit-content;
     height: fit-content;
@@ -817,9 +793,6 @@ textarea.form-input.activated:focus::placeholder {
 
 
 /*  Adaptive  */
-/*  Adaptive  */
-/*  Adaptive  */
-
 @media only all {
     /*  If the screen width is the more than 2000 pixels  */
     @media only all and (min-width: 2000px) {
