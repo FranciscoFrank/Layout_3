@@ -23,13 +23,10 @@ body {
     color: var(--second-color);
 }
 
-
 /*  Container  */
 .container {
     flex-grow: 1;
 }
-
-
 
 /*  Header  */ 
 header {
@@ -119,8 +116,6 @@ header {
     text-decoration: underline dashed;
 }
 
-
-
 /*  Menu  */
 .menu {
     background-color: var(--second-color);
@@ -131,7 +126,7 @@ header {
     text-align: center;
 }
 
-/*  Menu  */
+/*  Main menu  */
 .main-menu {
     color: var(--third-color);
     display: flex;
@@ -247,8 +242,6 @@ header {
     transform: translateY(3.5px) rotate(45deg);
 }
 
-
-
 /*  Slider  */
 .slider {
     width: 100%;
@@ -294,8 +287,6 @@ header {
 .slick-next {
     right: 10%;
 }
-
-
 
 /*  Content  */
 .content {
@@ -593,8 +584,6 @@ hr {
     flex: 1;
 }
 
-
-
 /*  Footer  */
 footer {
     margin-top: auto;
@@ -665,8 +654,6 @@ footer {
     flex-direction: column;
     align-items: flex-start;
 }
-
-
 
 /*  Feedback form  */
 .feedback-form {
@@ -812,8 +799,6 @@ textarea.form-input.activated:focus::placeholder {
     visibility: visible;
     opacity: 1;
 }
-
-
 
 /*  Adaptive  */
 @media only all {
