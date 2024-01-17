@@ -36,19 +36,33 @@ header {
     background-color: var(--first-color);
     width: 100%;
     height: 100%;
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  Header content  */
+.header-content {
+    padding: 10px;
+    width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
 /*  Company logo and name  */
 .logo-name {
     background-color: var(--first-color);
     display: flex;
-    padding-top: 3%;
-    padding-bottom: 3%;
     align-items: center;
+    width: fit-content;
 }
 
 .logo {
-    margin-right: 1%;
+    margin-right: 3%;
     display: block;
 }
 
@@ -61,6 +75,7 @@ header {
 }
 
 .slogan {
+    white-space: nowrap;
     color: var(--second-color);
 }
 
@@ -72,11 +87,9 @@ header {
 /*  Contact block  */
 .contact-info {
     color: var(--second-color);
-    margin-right: 10%;
     text-align: right;
-    position: absolute;
-    top: 10px;
-    right: 5%;
+    position: relative;
+    top: -20px;
     display: block;
 }
 
@@ -114,7 +127,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
     height: 100%;
     text-align: center;
 }
@@ -125,8 +137,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 1000px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
 }
+
 
 .main-menu li {
     list-style: none;
@@ -150,6 +166,10 @@ header {
 }
 
 /*  Burger icon  */
+.burger-icon {
+    padding: 10px;
+}
+
 .burger-line {
     position: relative;
     background-color: var(--third-color);
@@ -578,18 +598,21 @@ hr {
 /*  Footer  */
 footer {
     margin-top: auto;
-    padding: 0;
     width: 100%;
     height: 100%;
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--second-color);
 }
 
 .footer-content {
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 3.5%;
-    padding-bottom: 3.5%;
-    width: 100%;
+    padding: 10px;
+    width: 1000px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -794,44 +817,8 @@ textarea.form-input.activated:focus::placeholder {
 
 /*  Adaptive  */
 @media only all {
-    /*  If the screen width is the more than 2000 pixels  */
-    @media only all and (min-width: 2000px) {
-        .logo-name {
-            margin-left: 10%;
-        }
-        
-        .logo-name img {
-            width: 150px;
-            height: 150px;
-        }
-
-        .name-company {
-            font-size: 35px;
-        }
-
-        .slogan {
-            font-size: 25px;
-        }
-
-        .phone-numbers a {
-            font-size: 45px;
-        }
-
-        .feedback a {
-            font-size: 25px;
-        }
-
-        .main-menu a {
-            font-size: 30px;
-        }
-    }
-
-    /*  If the screen width is in the range 1800 - 2000 pixels  */
-    @media only all and (max-width: 2000px) {
-        .logo-name {
-            margin-left: 10%;
-        }
-        
+    /*  If the screen width is in the range 1600 - 1800 pixels  */
+    @media only all and (min-width: 1600px){
         .logo-name img {
             width: 135px;
             height: 135px;
@@ -842,45 +829,9 @@ textarea.form-input.activated:focus::placeholder {
         }
 
         .slogan {
-            font-size: 25px;
-        }
-
-        .phone-numbers {
-            font-size: 40px;
-        }
-
-        .feedback a {
-            font-size: 25px;
-        }
-
-        .main-menu {
             font-size: 20px;
         }
 
-        .main-menu a {
-            font-size: 30px;
-        }
-    }
-
-    /*  If the screen width is in the range 1600 - 1800 pixels  */
-    @media only all and (max-width: 1800px){
-        .logo-name {
-            margin-left: 10%;
-        }
-        
-        .logo-name img {
-            width: 170px;
-            height: 170px;
-        }
-
-        .name-company {
-            font-size: 35px;
-        }
-
-        .slogan {
-            font-size: 25px;
-        }
-
         .phone-numbers {
             font-size: 35px;
         }
@@ -890,19 +841,15 @@ textarea.form-input.activated:focus::placeholder {
         }
 
         .main-menu a {
-            font-size: 30px;
+            font-size: 25px;
         }
     }
 
     /*  If the screen width is in the range 1400 - 1600 pixels  */
-    @media only all and (max-width: 1600px) {
-        .logo-name {
-            margin-left: 10%;
-        }
-        
+    @media only all and (max-width: 1600px) {       
         .logo-name img {
-            width: 145px;
-            height: 145px;
+            width: 135px;
+            height: 135px;
         }
 
         .name-company {
@@ -922,16 +869,12 @@ textarea.form-input.activated:focus::placeholder {
         }
 
         .main-menu a {
-            font-size: 30px;
+            font-size: 25px;
         }
     }
 
     /*  If the screen width is in the range 1200 - 1400 pixels  */
-    @media only all and (max-width: 1400px) {
-        .logo-name {
-            margin-left: 10%;
-        }
-        
+    @media only all and (max-width: 1400px) {       
         .logo-name img {
             width: 120px;
             height: 120px;
@@ -946,24 +889,16 @@ textarea.form-input.activated:focus::placeholder {
         }
 
         .phone-numbers {
-            font-size: 30px;
+            font-size: 35px;
         }
 
         .feedback a {
-            font-size: 20px;
-        }
-
-        .main-menu a {
             font-size: 25px;
         }
     }
 
     /*  If the screen width is in the range 815 - 1200 pixels  */
-    @media only all and (max-width: 1200px) {
-        .logo-name {
-            margin-left: 10%;
-        }
-        
+    @media only all and (max-width: 1200px) {       
         .logo-name img {
             width: 95px;
             height: 95px;
@@ -985,10 +920,6 @@ textarea.form-input.activated:focus::placeholder {
             font-size: 15px;
         }
 
-        .main-menu a {
-            font-size: 20px;
-        }
-
         .left-content, .breadcrumbs {
             padding-left: 10%;
         }
@@ -1000,7 +931,7 @@ textarea.form-input.activated:focus::placeholder {
     
         .right-info {
             margin-left: 0;
-            margin-top: 5%; /* або інше значення за вашим бажанням */
+            margin-top: 5%;
         }
     }
 
@@ -1013,14 +944,18 @@ textarea.form-input.activated:focus::placeholder {
         .card .price {
             font-size: 20px;
         }
+
+        .main-menu {
+            display: none;
+        }
+
+        .burger-line {
+            display: block;
+        }
     }
 
     /*  If the screen width is in the range 650 - 815 pixels  */
-    @media only all and (max-width: 815px) {
-        .logo-name {
-            margin-left: 10%;
-        }
-        
+    @media only all and (max-width: 815px) {      
         .logo-name img {
             width: 90px;
             height: 90px;
@@ -1028,6 +963,10 @@ textarea.form-input.activated:focus::placeholder {
 
         .name-company {
             font-size: 20px;
+        }
+
+        .contact-info {
+            top: -15px;
         }
 
         .slogan {
@@ -1040,14 +979,6 @@ textarea.form-input.activated:focus::placeholder {
 
         .feedback a {
             font-size: 14px;
-        }
-
-        .main-menu {
-            display: none;
-        }
-
-        .burger-line {
-            display: block;
         }
 
         .left-content, .breadcrumbs {
@@ -1109,11 +1040,7 @@ textarea.form-input.activated:focus::placeholder {
     }
 
     /*  If the screen width is in the range 550 - 650 pixels  */
-    @media only all and (max-width: 650px) {
-        .logo-name {
-            margin-left: 10%;
-        }
-        
+    @media only all and (max-width: 650px) {       
         .logo-name img {
             width: 80px;
             height: 80px;
@@ -1230,10 +1157,6 @@ textarea.form-input.activated:focus::placeholder {
             font-size: 10px;
         }
 
-        .menu {
-            padding: 10px;
-        }
-
         .menu-toggle {
             font-size: 20px;
         }
@@ -1277,11 +1200,6 @@ textarea.form-input.activated:focus::placeholder {
             font-size: 7px;
         }
 
-        .contact-info {
-            top: 7px;
-            margin-left: 65%;
-        }
-
         .phone-numbers {
             font-size: 9px;
             margin-bottom: -12%;
@@ -1295,10 +1213,6 @@ textarea.form-input.activated:focus::placeholder {
             inline-size: 15px;
         }
 
-        .menu {
-            padding: 5px;
-        }
-
         .burger-icon .burger-line {
             margin-block: 2px;
         }
@@ -1310,7 +1224,6 @@ textarea.form-input.activated:focus::placeholder {
         .burger-icon-close {
             width: 15px;
             height: 15px;
-            top: 1em;
         }
 
         .burger-icon-close .burger-line {
