@@ -23,30 +23,22 @@ body {
     color: var(--second-color);
 }
 
-/*  Container  */
-.container {
-    flex-grow: 1;
-}
-
 /*  Header  */ 
 header {
     background-color: var(--first-color);
     width: 100%;
     height: 100%;
-    padding: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /*  Header content  */
 .header-content {
     padding: 10px;
     width: 980px;
-    display: flex;
     margin: 0 auto;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -121,7 +113,7 @@ header {
     background-color: var(--second-color);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
     text-align: center;
 }
@@ -130,14 +122,13 @@ header {
 .main-menu {
     color: var(--third-color);
     display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
-    width: 980px;
+    min-width: 980px;
     padding: 10px;
-    margin: 0 auto;
     text-align: center;
 }
-
 
 .main-menu li {
     list-style: none;
@@ -222,16 +213,14 @@ header {
     z-index: 3;
     display: block;
     position: fixed;
-    top: 2em;
+    top: 1em;
     text-align: center;
     width: 30px;
     height: 30px;
-    transform: translateX(-300%);
     transition: transform 0.5s; 
-}
-
-.burger-menu.active ~ .burger-icon-close {
-    transform: translateX(0%);
+    transform: translateX(35%);
+    padding: 0;
+    color: var(--third-color);
 }
 
 .burger-icon-close .burger-line:nth-child(2) {
@@ -240,6 +229,17 @@ header {
 
 .burger-icon-close .burger-line:nth-child(1) {
     transform: translateY(3.5px) rotate(45deg);
+}
+
+/*  Container  */
+.container {
+    flex-grow: 1;
+}
+
+.container-content {
+    padding: 10px;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 /*  Slider  */
@@ -292,14 +292,12 @@ header {
 .content {
     height: 100%;
     overflow: hidden;
-    width: 100%;
 }
 
 /* Breadcrumbs */
 .breadcrumbs {
-    padding-left: 15%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .breadcrumbs a {
@@ -315,10 +313,10 @@ header {
 /*  Left block  */
 .left-content {
     float: left;
-    padding-top: 1%;
-    padding-left: 15%;
-    width: 30%;
+    width: 20%;
     height: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 /*  Main menu  */
@@ -479,30 +477,32 @@ header {
 
 /*  Center content  */
 .center-content {
-    padding-left: 1.5%;
-    padding-right: 15%;
     float: right;
     position: relative;
     justify-content: center;
-    padding-top: 1%;
-    width: 70%;
+    width: 80%;
 }
 
 /*  Product cards */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+.gallery{
+	padding-top: 10px;
 }
 
-.card {
-    margin-bottom: 20px;
+.card{
+	float: left; 
+    margin-left: 15px;
+	margin-bottom: 20px;
+	height: fit-content;
+	width: 245px;
     background-color: var(--first-color);
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    width: 230px;
-    margin-right: 15px;
+}
+
+.card:nth-child(1) {
+    margin-left: 0;
+}
+
+.card:nth-child(4) {
+    margin-left: 0;
 }
 
 .description {
@@ -589,9 +589,8 @@ footer {
     margin-top: auto;
     width: 100%;
     height: 100%;
-    padding: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -599,9 +598,9 @@ footer {
 }
 
 .footer-content {
+    margin: 0 auto;
     padding: 10px;
     width: 980px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -905,10 +904,6 @@ textarea.form-input.activated:focus::placeholder {
             font-size: 15px;
         }
 
-        .left-content, .breadcrumbs {
-            padding-left: 10%;
-        }
-
         .useful-info {
             flex-direction: column;
             align-items: stretch;
@@ -917,6 +912,25 @@ textarea.form-input.activated:focus::placeholder {
         .right-info {
             margin-left: 0;
             margin-top: 5%;
+        }
+    }
+
+    /* Edits for the menu and card */
+    @media only all and (max-width: 1010px) {
+        .main-menu {
+            display: none;
+        }
+
+        .burger-line {
+            display: block;
+        }
+
+        .card:nth-child(1) {
+            margin-left: 15px;
+        }
+
+        .card:nth-child(4) {
+            margin-left: 15px;
         }
     }
 
@@ -966,10 +980,6 @@ textarea.form-input.activated:focus::placeholder {
             font-size: 14px;
         }
 
-        .left-content, .breadcrumbs {
-            padding-left: 5%;
-        }
-
         .left-content {
             display: flex;
             flex-direction: column;
@@ -997,6 +1007,10 @@ textarea.form-input.activated:focus::placeholder {
             display: none;
         }
 
+        .price-list a {
+            font-size: 25px;
+        }
+
         .menu-toggle {
             margin-bottom: 10%;
             border: none;
@@ -1014,7 +1028,7 @@ textarea.form-input.activated:focus::placeholder {
         }        
     }
 
-    /*  Edits for the gallery  */
+    /*  Edits for the gallery and price list  */
     @media only all and (max-width: 690px) {
         .gallery {
             display: flex;
@@ -1022,6 +1036,15 @@ textarea.form-input.activated:focus::placeholder {
             justify-content: center;
             align-items: center;
         }  
+
+        .price-list a {
+            font-size: 20px;
+        }
+
+        .price-list img {
+            height: 95px;
+            width: auto;
+        }
     }
 
     /*  If the screen width is in the range 550 - 650 pixels  */
@@ -1048,26 +1071,14 @@ textarea.form-input.activated:focus::placeholder {
             font-size: 11px;
         }
 
-        .main-menu {
-            display: none;
-        }
-
-        .burger-line {
-            display: block;
-        }
-
         .price-list img {
             height: 95px;
             width: auto;
         }
-
-        .price-list p {
-            font-size: 25px;
-        }
     }
 
     /*  If the screen width is in the range 490 - 550 pixels  */
-    @media only all and (max-width: 550px) {
+    @media only all and (max-width: 560px) {
         .logo img {
             height: 70px;
             width: 70px;
@@ -1085,13 +1096,13 @@ textarea.form-input.activated:focus::placeholder {
             font-size: 15px;
         }
 
+        .price-list a {
+            font-size: 15px;
+        }
+
         .price-list img {
             height: 75px;
             width: auto;
-        }
-
-        .price-list p {
-            font-size: 20px;
         }
         
         .pagination {
@@ -1103,11 +1114,11 @@ textarea.form-input.activated:focus::placeholder {
         }
 
         hr, .useful-info {
-            margin-left: -40%;
+            margin-left: -25%;
         }
     }
 
-    /*  Edits for the footer  */
+    /*  Edits for the footer and price list  */
     @media only all and (max-width: 530px) {
         .copyright {
             padding-bottom: 5%;
@@ -1115,6 +1126,15 @@ textarea.form-input.activated:focus::placeholder {
 
         .footer-menu {
             padding-bottom: 5%;
+        }
+
+        .price-list a {
+            font-size: 13px;
+        }
+
+        .price-list img {
+            height: 65px;
+            width: auto;
         }
     }
 
@@ -1209,6 +1229,7 @@ textarea.form-input.activated:focus::placeholder {
         .burger-icon-close {
             width: 15px;
             height: 15px;
+            top: 0.5em;
         }
 
         .burger-icon-close .burger-line {
@@ -1232,7 +1253,7 @@ textarea.form-input.activated:focus::placeholder {
         }
 
         .menu-toggle {
-            font-size: 16px;
+            font-size: 14px;
             padding: 5px;
         }
 
@@ -1240,13 +1261,13 @@ textarea.form-input.activated:focus::placeholder {
             font-size: 20px;
         }
 
+        .price-list a {
+            font-size: 10px;
+        }
+
         .price-list img {
             height: 55px;
             width: auto;
-        }
-
-        .price-list p {
-            font-size: 15px;
         }
 
         .card {
@@ -1297,6 +1318,11 @@ textarea.form-input.activated:focus::placeholder {
         .adaptive-menu .subcategories li {
             font-size: 12px;
         }
+
+        .price-list img {
+            height: 45px;
+            width: auto;
+        }
     }
 
     /*  If the screen width is less than 260 pixels  */
@@ -1322,13 +1348,6 @@ textarea.form-input.activated:focus::placeholder {
 
     /*  Edits for the slider  */
     @media only all {
-        @media only all and (min-width: 2000px) {
-            .slick-prev img,
-            .slick-next img {
-                height: 95px;
-            }
-        }
-
         @media only all and (max-width: 2000px) {
             .slick-prev img,
             .slick-next img {
