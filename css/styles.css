@@ -258,14 +258,27 @@ header {
     transition: opacity 0.5s ease-in-out;
 }
 
-.slick-prev,
-.slick-next {
-    all: initial;
+.slider-content {
+    position: relative;
+}
+
+.slick-arrows-container {
+    max-width: 980px;
+    margin: 0 auto;
     position: absolute;
     top: 50%;
+    left: 0;
+    right: 0;
     transform: translateY(-50%);
-    z-index: 1; 
+    z-index: 1;
+}
+
+.slick-prev,
+.slick-next {
+    background-color: transparent;
     border: none;
+    position: absolute;
+    z-index: 2;
 }
 
 .slick-prev {
@@ -1336,10 +1349,10 @@ textarea.form-input.activated:focus::placeholder {
 
     /*  Edits for the slider  */
     @media only all {
-        @media only all and (max-width: 2000px) {
+        @media only all and (min-width: 1600px) {
             .slick-prev img,
             .slick-next img {
-                height: 75px;
+                height: 55px;
             }
         }
 

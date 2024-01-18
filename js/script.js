@@ -28,8 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
         centerMode: true,
 
         /*  Arrows to switch the slider  */
-        prevArrow: '<button type="button" class="slick-prev"><img src="images/left.jpg" alt="Previous"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="images/right.jpg" alt="Next"></button>',
+        prevArrow: function() {
+            return $('.slick-prev');
+        },
+        nextArrow: function() {
+            return $('.slick-next');
+        }
     });
 });
 
